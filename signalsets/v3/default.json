@@ -469,18 +469,6 @@
     {"id": "LEXUS_TIRE3_TEMP","path": "Tires","fmt": {"bix": 48,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Tire 3 temperature"},
     {"id": "LEXUS_TIRE4_TEMP","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Tire 4 temperature"}
   ]},
-{ "hdr": "6F1", "eax": "40", "fcm1": true, "dbg": true, "cmd": {"22": "1700"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ODO_2","path": "Trips","fmt": {"len": 32,"max": 1000000,"unit": "kilometers"},"name": "Odometer variant"}
-  ]},
-{ "hdr": "6F1", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4AB1"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VSS2","path": "Movement","fmt": {"len": 16,"max": 255,"div": 100,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed","description": "High resolution vehicle speed."}
-  ]},
-{ "hdr": "6F1", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "586F"}, "freq": 30, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_EOP_V2","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Engine oil pressure"}
-  ]},
 { "hdr": "6F1", "eax": "60", "fcm1": true, "dbg": true, "cmd": {"22": "D107"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_VSS_V2","path": "Movement","fmt": {"len": 16,"max": 255,"div": 10,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed","description": "Speedometer vehicle speed."}
@@ -489,66 +477,6 @@
   "signals": [
     {"id": "LEXUS_ODO1","path": "Trips","fmt": {"len": 32,"max": 4294967295,"unit": "kilometers"},"name": "Odometer #1","suggestedMetric": "odometer"},
     {"id": "LEXUS_ODO2","path": "Trips","fmt": {"bix": 32,"len": 32,"max": 4294967295,"unit": "kilometers"},"name": "Odometer #2","suggestedMetric": "odometer"}
-  ]},
-{ "hdr": "6F1", "eax": "0D", "fcm1": true, "dbg": true, "cmd": {"22": "D240"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VSS_INSTR","path": "Movement","fmt": {"len": 16,"max": 1000,"unit": "kilometersPerHour"},"name": "Vehicle speed (instrument cluster)","suggestedMetric": "speed","description": "Instrument cluster vehicle speed."}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA12"}, "freq": 30, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ATF_TEMP_V2","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Atf temperature"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA1F"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_KICKDOWN","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 100,"unit": "scalar"},"name": "Kickdown"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA22"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TQ_CNVRT_LOCKUP","path": "Transmission","name": "Torque converter lockup","fmt": {"bix": 8,"len": 8,"map": {"0": {"description": "Open","value": "OPEN"},"1": {"description": "Controlled low","value": "CONTROL_LOW"},"2": {"description": "Controlled high","value": "CONTROL_HIGH"},"3": {"description": "Closed low","value": "CLOSED_LOW"},"4": {"description": "Closed high","value": "CLOSED_HIGH"},"8": {"description": "Transition to open","value": "TRANSITION_OPEN"}}}}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA23"}, "freq": 15, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ODO_V3","path": "Trips","fmt": {"len": 32,"max": 1000000,"mul": 8,"unit": "kilometers"},"name": "[egs] mileage/odometer"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA25"}, "freq": 30, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_EOT_V3","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Engine oil temperature"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA28"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_BRAKE_SWITCH","path": "Control","fmt": {"bix": 8,"len": 8,"max": 1,"unit": "scalar"},"name": "Brake switch"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA2A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TQ_CNVRT_RPM","path": "Transmission","fmt": {"len": 16,"max": 32767,"min": -32768,"sign": true,"unit": "rpm"},"name": "Torque converter speed"},
-    {"id": "LEXUS_TRANS_SHAFT_RPM","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 32767,"min": -32768,"sign": true,"unit": "rpm"},"name": "Transmission output shaft speed"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA2E"}, "freq": 30, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_GEAR_V2","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Gear"}
-  ]},
-{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA37"}, "freq": 30, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TIME_D","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Time in d"},
-    {"id": "LEXUS_TIME_S","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "scalar"},"name": "Time in s"},
-    {"id": "LEXUS_TIME_M","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "scalar"},"name": "Time in m"}
-  ]},
-{ "hdr": "6F1", "eax": "19", "fcm1": true, "dbg": true, "cmd": {"22": "DB32"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_AXLE_FRONT_ACTUAL_TORQUE","path": "Tires","fmt": {"len": 16,"max": 8000,"min": -8000,"div": 4,"sign": true,"unit": "newtonMeters"},"name": "Front axle, actual torque"},
-    {"id": "LEXUS_AXLE_FRONT_SETPOINT_TORQUE","path": "Tires","fmt": {"bix": 32,"len": 16,"max": 8000,"min": -8000,"div": 4,"sign": true,"unit": "newtonMeters"},"name": "Front axle, setpoint torque"}
-  ]},
-{ "hdr": "6F1", "eax": "29", "fcm1": true, "dbg": true, "cmd": {"22": "DBE4"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FL_SPD","path": "Movement","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Front left wheel speed"},
-    {"id": "LEXUS_FR_SPD","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Front right wheel speed"},
-    {"id": "LEXUS_RL_SPD","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Rear left wheel speed"},
-    {"id": "LEXUS_RR_SPD","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Rear right wheel speed"}
-  ]},
-{ "hdr": "6F1", "eax": "19", "fcm1": true, "dbg": true, "cmd": {"22": "DFE7"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VGT_CAL_ANGLE","path": "Engine","fmt": {"len": 16,"max": 1000,"mul": 156.25,"div": 10000,"unit": "degrees"},"name": "Variable geometry turbocharger calibration angle"},
-    {"id": "LEXUS_OIL_CHANGE_DIST","path": "Fluids","fmt": {"bix": 304,"len": 32,"max": 1000000,"unit": "kilometers"},"name": "Distance since last oil change"}
   ]},
 { "hdr": "700", "dbg": true, "cmd": {"22": "1043"}, "freq": 60,
   "signals": [
@@ -559,254 +487,18 @@
   "signals": [
     {"id": "LEXUS_ECU_INTERNAL_T","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ecu internal temperature"}
   ]},
-{ "hdr": "700", "dbg": true, "cmd": {"22": "1074"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_EOP","path": "Engine","fmt": {"len": 16,"max": 5119,"div": 12.8,"unit": "kilopascal"},"name": "Engine oil pressure"},
-    {"id": "LEXUS_ENG_OIL_PRESS","path": "Engine","fmt": {"len": 16,"max": 1000,"mul": 10,"div": 128,"unit": "kilopascal"},"name": "Engine oil pressure"}
-  ]},
-{ "hdr": "700", "dbg": true, "cmd": {"22": "1078"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_IDLE_SAC_CYL_1","path": "Engine","fmt": {"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 1"},
-    {"id": "LEXUS_IDLE_SAC_CYL_2","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 2"},
-    {"id": "LEXUS_IDLE_SAC_CYL_3","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 3"},
-    {"id": "LEXUS_IDLE_SAC_CYL_4","path": "Engine","fmt": {"bix": 24,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 4"}
-  ]},
-{ "hdr": "700", "dbg": true, "cmd": {"22": "10A7"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_MIS_1","path": "Engine.Misfires","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 1"},
-    {"id": "LEXUS_MIS_2","path": "Engine.Misfires","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 2"},
-    {"id": "LEXUS_MIS_3","path": "Engine.Misfires","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 3"},
-    {"id": "LEXUS_MIS_4","path": "Engine.Misfires","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 4"}
-  ]},
-{ "hdr": "700", "dbg": true, "cmd": {"22": "1638"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ATF_TEMP","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transmission fluid temperature"}
-  ]},
 { "hdr": "700", "dbg": true, "cmd": {"22": "1F5C"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_EOT_V3_V2","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature, variation 2"},
     {"id": "LEXUS_EOT_V2_V2","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature, variation 2","suggestedMetric": "engineOilTemperature"}
   ]},
-{ "hdr": "700", "dbg": true, "cmd": {"22": "2848"}, "freq": 0.5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_EOP_CONTROL_VALVE","path": "Engine","fmt": {"len": 16,"max": 4999,"mul": 762.93,"div": 10000,"unit": "milliamps"},"name": "Engine oil pressure control valve"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1075"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_IWP_SPEED","path": "Movement","fmt": {"len": 16,"max": 300,"min": -40,"mul": 238212,"div": 10000,"add": -256000,"unit": "celsius"},"name": "Intercooler water pump speed"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "108A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VVT_IE_DUTY_RATIO_BANK_1","path": "Engine","fmt": {"len": 16,"max": 199,"mul": 399.9,"div": 65535,"add": -200,"unit": "percent"},"name": "Variable valve timing duty ratio, bank 1"},
-    {"id": "LEXUS_VVT_IE_DUTY_RATIO_1","path": "ECU","fmt": {"len": 15,"max": 100,"mul": 399.9,"div": 65535,"add": -200,"unit": "percent"},"name": "VVT-ie duty ratio bank 1"},
-    {"id": "LEXUS_VVT_IE_MOTOR_DIRECTION_FORWARD_1","path": "ECU","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "offon"},"name": "VVT-ie motor direction: forward bank 1"}
-  ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "108D"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_INTAKE_VVT_OVER_RET_LEARN_B1","path": "Engine","fmt": {"len": 16,"max": 639.99,"mul": 639.99,"div": 65535,"unit": "degrees"},"name": "Intake VVT most over-retarded learn value, bank 1"}
   ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "108F"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_EXHAUST_VVT_OVER_ADV_LEARN_B1","path": "Engine","fmt": {"len": 16,"max": 639.99,"mul": 639.99,"div": 65535,"unit": "degrees"},"name": "Exhaust VVT timing most over-advanced learn value, bank 1"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "109A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FFT","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Fuel filter temperature"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2827"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ELECTRIC_WATER_PUMP","path": "Engine","fmt": {"len": 8,"max": 10200,"mul": 40,"unit": "rpm"},"name": "Electric water pump"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2829"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ELECTRIC_THERMOSTAT_DUTY_RATIO","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "percent"},"name": "Electric thermostat duty ratio"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "282C"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_COOLANT_VALVE_1_CLOSE","path": "Engine","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "noyes"},"name": "Coolant water route switching valve 1, closed?"}
-  ]},
-{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2843"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VVT_IE_OPENING_ANGLE_BANK_1","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "percent"},"name": "Variable valve timing opening angle bank 1"}
-  ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2847"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_COOLANT_VALVE_2_CLOSE","path": "Engine","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "noyes"},"name": "Coolant water route switching valve 2, closed?"}
-  ]},
-{ "hdr": "701", "dbg": true, "cmd": {"22": "1628"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TF2_CONV","path": "Engine","fmt": {"len": 16,"max": 350,"min": -40,"mul": 0.00703125,"add": -40,"unit": "fahrenheit"},"name": "Transmission fluid post-converter temperature"}
-  ]},
-{ "hdr": "701", "rax": "709", "dbg": true, "cmd": {"22": "162B"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ATF_THERMAL_DEGRAD_EST","path": "Engine","fmt": {"len": 16,"max": 65535,"unit": "scalar"},"name": "Automatic transmission fluid thermal degradation estimate"}
-  ]},
-{ "hdr": "745", "fcm1": true, "dbg": true, "cmd": {"22": "1739"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_HVBAT_SOC_DISPLAY","path": "Battery","fmt": {"len": 8,"max": 100,"unit": "percent"},"name": "HV battery charge (displayed)","suggestedMetric": "stateOfCharge"}
-  ]},
-{ "hdr": "747", "fcm1": true, "dbg": true, "cmd": {"22": "182E"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_HVBAT_CMU01_VOLT","path": "Battery.Modules.01","fmt": {"len": 16,"max": 5,"div": 13107,"unit": "volts"},"name": "HV battery module 01 voltage"},
-    {"id": "LEXUS_HVBAT_C01_V","path": "Battery.Cells","fmt": {"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #01 voltage"},
-    {"id": "LEXUS_HVBAT_CMU02_VOLT","path": "Battery.Modules.02","fmt": {"bix": 16,"len": 16,"max": 5,"div": 13107,"unit": "volts"},"name": "HV battery module 02 voltage"},
-    {"id": "LEXUS_HVBAT_C02_V","path": "Battery.Cells","fmt": {"bix": 16,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #02 voltage"},
-    {"id": "LEXUS_HVBAT_C03_V","path": "Battery.Cells","fmt": {"bix": 32,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #03 voltage"},
-    {"id": "LEXUS_HVBAT_C04_V","path": "Battery.Cells","fmt": {"bix": 48,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #04 voltage"},
-    {"id": "LEXUS_HVBAT_C05_V","path": "Battery.Cells","fmt": {"bix": 64,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #05 voltage"},
-    {"id": "LEXUS_HVBAT_C06_V","path": "Battery.Cells","fmt": {"bix": 80,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #06 voltage"},
-    {"id": "LEXUS_HVBAT_C07_V","path": "Battery.Cells","fmt": {"bix": 96,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #07 voltage"},
-    {"id": "LEXUS_HVBAT_C08_V","path": "Battery.Cells","fmt": {"bix": 112,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #08 voltage"},
-    {"id": "LEXUS_HVBAT_C09_V","path": "Battery.Cells","fmt": {"bix": 128,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #09 voltage"},
-    {"id": "LEXUS_HVBAT_C10_V","path": "Battery.Cells","fmt": {"bix": 144,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #10 voltage"},
-    {"id": "LEXUS_HVBAT_C11_V","path": "Battery.Cells","fmt": {"bix": 160,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #11 voltage"},
-    {"id": "LEXUS_HVBAT_C12_V","path": "Battery.Cells","fmt": {"bix": 176,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #12 voltage"},
-    {"id": "LEXUS_HVBAT_C13_V","path": "Battery.Cells","fmt": {"bix": 192,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #13 voltage"},
-    {"id": "LEXUS_HVBAT_C14_V","path": "Battery.Cells","fmt": {"bix": 208,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #14 voltage"},
-    {"id": "LEXUS_HVBAT_C15_V","path": "Battery.Cells","fmt": {"bix": 224,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #15 voltage"},
-    {"id": "LEXUS_HVBAT_C16_V","path": "Battery.Cells","fmt": {"bix": 240,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #16 voltage"},
-    {"id": "LEXUS_HVBAT_C17_V","path": "Battery.Cells","fmt": {"bix": 256,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #17 voltage"},
-    {"id": "LEXUS_HVBAT_C18_V","path": "Battery.Cells","fmt": {"bix": 272,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #18 voltage"},
-    {"id": "LEXUS_HVBAT_C19_V","path": "Battery.Cells","fmt": {"bix": 288,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #19 voltage"},
-    {"id": "LEXUS_HVBAT_C20_V","path": "Battery.Cells","fmt": {"bix": 304,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #20 voltage"},
-    {"id": "LEXUS_HVBAT_C21_V","path": "Battery.Cells","fmt": {"bix": 320,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #21 voltage"},
-    {"id": "LEXUS_HVBAT_C22_V","path": "Battery.Cells","fmt": {"bix": 336,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #22 voltage"},
-    {"id": "LEXUS_HVBAT_C23_V","path": "Battery.Cells","fmt": {"bix": 352,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #23 voltage"},
-    {"id": "LEXUS_HVBAT_C24_V","path": "Battery.Cells","fmt": {"bix": 368,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #24 voltage"},
-    {"id": "LEXUS_HVBAT_C25_V","path": "Battery.Cells","fmt": {"bix": 384,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #25 voltage"},
-    {"id": "LEXUS_HVBAT_C26_V","path": "Battery.Cells","fmt": {"bix": 400,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #26 voltage"},
-    {"id": "LEXUS_HVBAT_C27_V","path": "Battery.Cells","fmt": {"bix": 416,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #27 voltage"},
-    {"id": "LEXUS_HVBAT_C28_V","path": "Battery.Cells","fmt": {"bix": 432,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #28 voltage"},
-    {"id": "LEXUS_HVBAT_C29_V","path": "Battery.Cells","fmt": {"bix": 448,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #29 voltage"},
-    {"id": "LEXUS_HVBAT_C30_V","path": "Battery.Cells","fmt": {"bix": 464,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #30 voltage"},
-    {"id": "LEXUS_HVBAT_C31_V","path": "Battery.Cells","fmt": {"bix": 480,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #31 voltage"},
-    {"id": "LEXUS_HVBAT_C32_V","path": "Battery.Cells","fmt": {"bix": 496,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #32 voltage"},
-    {"id": "LEXUS_HVBAT_C33_V","path": "Battery.Cells","fmt": {"bix": 512,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #33 voltage"},
-    {"id": "LEXUS_HVBAT_C34_V","path": "Battery.Cells","fmt": {"bix": 528,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #34 voltage"},
-    {"id": "LEXUS_HVBAT_C35_V","path": "Battery.Cells","fmt": {"bix": 544,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #35 voltage"},
-    {"id": "LEXUS_HVBAT_C36_V","path": "Battery.Cells","fmt": {"bix": 560,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #36 voltage"},
-    {"id": "LEXUS_HVBAT_C37_V","path": "Battery.Cells","fmt": {"bix": 576,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #37 voltage"},
-    {"id": "LEXUS_HVBAT_C38_V","path": "Battery.Cells","fmt": {"bix": 592,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #38 voltage"},
-    {"id": "LEXUS_HVBAT_C39_V","path": "Battery.Cells","fmt": {"bix": 608,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #39 voltage"},
-    {"id": "LEXUS_HVBAT_C40_V","path": "Battery.Cells","fmt": {"bix": 624,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #40 voltage"},
-    {"id": "LEXUS_HVBAT_C41_V","path": "Battery.Cells","fmt": {"bix": 640,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #41 voltage"},
-    {"id": "LEXUS_HVBAT_C42_V","path": "Battery.Cells","fmt": {"bix": 656,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #42 voltage"},
-    {"id": "LEXUS_HVBAT_C43_V","path": "Battery.Cells","fmt": {"bix": 672,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #43 voltage"},
-    {"id": "LEXUS_HVBAT_C44_V","path": "Battery.Cells","fmt": {"bix": 688,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #44 voltage"},
-    {"id": "LEXUS_HVBAT_C45_V","path": "Battery.Cells","fmt": {"bix": 704,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #45 voltage"},
-    {"id": "LEXUS_HVBAT_C46_V","path": "Battery.Cells","fmt": {"bix": 720,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #46 voltage"},
-    {"id": "LEXUS_HVBAT_C47_V","path": "Battery.Cells","fmt": {"bix": 736,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #47 voltage"},
-    {"id": "LEXUS_HVBAT_C48_V","path": "Battery.Cells","fmt": {"bix": 752,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #48 voltage"},
-    {"id": "LEXUS_HVBAT_C49_V","path": "Battery.Cells","fmt": {"bix": 768,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #49 voltage"},
-    {"id": "LEXUS_HVBAT_C50_V","path": "Battery.Cells","fmt": {"bix": 784,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #50 voltage"},
-    {"id": "LEXUS_HVBAT_C51_V","path": "Battery.Cells","fmt": {"bix": 800,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #51 voltage"},
-    {"id": "LEXUS_HVBAT_C52_V","path": "Battery.Cells","fmt": {"bix": 816,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #52 voltage"},
-    {"id": "LEXUS_HVBAT_C53_V","path": "Battery.Cells","fmt": {"bix": 832,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #53 voltage"},
-    {"id": "LEXUS_HVBAT_C54_V","path": "Battery.Cells","fmt": {"bix": 848,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #54 voltage"},
-    {"id": "LEXUS_HVBAT_C55_V","path": "Battery.Cells","fmt": {"bix": 864,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #55 voltage"},
-    {"id": "LEXUS_HVBAT_C56_V","path": "Battery.Cells","fmt": {"bix": 880,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #56 voltage"},
-    {"id": "LEXUS_HVBAT_C57_V","path": "Battery.Cells","fmt": {"bix": 896,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #57 voltage"},
-    {"id": "LEXUS_HVBAT_C58_V","path": "Battery.Cells","fmt": {"bix": 912,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #58 voltage"},
-    {"id": "LEXUS_HVBAT_C59_V","path": "Battery.Cells","fmt": {"bix": 928,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #59 voltage"},
-    {"id": "LEXUS_HVBAT_C60_V","path": "Battery.Cells","fmt": {"bix": 944,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #60 voltage"},
-    {"id": "LEXUS_HVBAT_C61_V","path": "Battery.Cells","fmt": {"bix": 960,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #61 voltage"},
-    {"id": "LEXUS_HVBAT_C62_V","path": "Battery.Cells","fmt": {"bix": 976,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #62 voltage"},
-    {"id": "LEXUS_HVBAT_C63_V","path": "Battery.Cells","fmt": {"bix": 992,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #63 voltage"},
-    {"id": "LEXUS_HVBAT_C64_V","path": "Battery.Cells","fmt": {"bix": 1008,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #64 voltage"},
-    {"id": "LEXUS_HVBAT_C65_V","path": "Battery.Cells","fmt": {"bix": 1024,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #65 voltage"},
-    {"id": "LEXUS_HVBAT_C66_V","path": "Battery.Cells","fmt": {"bix": 1040,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #66 voltage"},
-    {"id": "LEXUS_HVBAT_C67_V","path": "Battery.Cells","fmt": {"bix": 1056,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #67 voltage"},
-    {"id": "LEXUS_HVBAT_C68_V","path": "Battery.Cells","fmt": {"bix": 1072,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #68 voltage"},
-    {"id": "LEXUS_HVBAT_C69_V","path": "Battery.Cells","fmt": {"bix": 1088,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #69 voltage"},
-    {"id": "LEXUS_HVBAT_C70_V","path": "Battery.Cells","fmt": {"bix": 1104,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #70 voltage"},
-    {"id": "LEXUS_HVBAT_C71_V","path": "Battery.Cells","fmt": {"bix": 1120,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #71 voltage"},
-    {"id": "LEXUS_HVBAT_C72_V","path": "Battery.Cells","fmt": {"bix": 1136,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #72 voltage"},
-    {"id": "LEXUS_HVBAT_C73_V","path": "Battery.Cells","fmt": {"bix": 1152,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #73 voltage"},
-    {"id": "LEXUS_HVBAT_C74_V","path": "Battery.Cells","fmt": {"bix": 1168,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #74 voltage"},
-    {"id": "LEXUS_HVBAT_C75_V","path": "Battery.Cells","fmt": {"bix": 1184,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #75 voltage"},
-    {"id": "LEXUS_HVBAT_C76_V","path": "Battery.Cells","fmt": {"bix": 1200,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #76 voltage"},
-    {"id": "LEXUS_HVBAT_C77_V","path": "Battery.Cells","fmt": {"bix": 1216,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #77 voltage"},
-    {"id": "LEXUS_HVBAT_C78_V","path": "Battery.Cells","fmt": {"bix": 1232,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #78 voltage"},
-    {"id": "LEXUS_HVBAT_C79_V","path": "Battery.Cells","fmt": {"bix": 1248,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #79 voltage"},
-    {"id": "LEXUS_HVBAT_C80_V","path": "Battery.Cells","fmt": {"bix": 1264,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #80 voltage"},
-    {"id": "LEXUS_HVBAT_C81_V","path": "Battery.Cells","fmt": {"bix": 1280,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #81 voltage"},
-    {"id": "LEXUS_HVBAT_C82_V","path": "Battery.Cells","fmt": {"bix": 1296,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #82 voltage"},
-    {"id": "LEXUS_HVBAT_C83_V","path": "Battery.Cells","fmt": {"bix": 1312,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #83 voltage"},
-    {"id": "LEXUS_HVBAT_C84_V","path": "Battery.Cells","fmt": {"bix": 1328,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #84 voltage"},
-    {"id": "LEXUS_HVBAT_C85_V","path": "Battery.Cells","fmt": {"bix": 1344,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #85 voltage"},
-    {"id": "LEXUS_HVBAT_C86_V","path": "Battery.Cells","fmt": {"bix": 1360,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #86 voltage"},
-    {"id": "LEXUS_HVBAT_C87_V","path": "Battery.Cells","fmt": {"bix": 1376,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #87 voltage"},
-    {"id": "LEXUS_HVBAT_C88_V","path": "Battery.Cells","fmt": {"bix": 1392,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #88 voltage"},
-    {"id": "LEXUS_HVBAT_C89_V","path": "Battery.Cells","fmt": {"bix": 1408,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #89 voltage"},
-    {"id": "LEXUS_HVBAT_C90_V","path": "Battery.Cells","fmt": {"bix": 1424,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #90 voltage"},
-    {"id": "LEXUS_HVBAT_C91_V","path": "Battery.Cells","fmt": {"bix": 1440,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #91 voltage"},
-    {"id": "LEXUS_HVBAT_C92_V","path": "Battery.Cells","fmt": {"bix": 1456,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #92 voltage"},
-    {"id": "LEXUS_HVBAT_C93_V","path": "Battery.Cells","fmt": {"bix": 1472,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #93 voltage"},
-    {"id": "LEXUS_HVBAT_C94_V","path": "Battery.Cells","fmt": {"bix": 1488,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #94 voltage"},
-    {"id": "LEXUS_HVBAT_C95_V","path": "Battery.Cells","fmt": {"bix": 1504,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #95 voltage"},
-    {"id": "LEXUS_HVBAT_C96_V","path": "Battery.Cells","fmt": {"bix": 1520,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #96 voltage"}
-  ]},
-{ "hdr": "750", "eax": "2A", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TP_2_FL","path": "Tires","fmt": {"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure"},
-    {"id": "LEXUS_TP_1","path": "Tires","fmt": {"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #1"},
-    {"id": "LEXUS_TP_2_FR","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "frontRightTirePressure"},
-    {"id": "LEXUS_TP_2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #2"},
-    {"id": "LEXUS_TP_2_RL","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "rearLeftTirePressure"},
-    {"id": "LEXUS_TP_3","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #3"},
-    {"id": "LEXUS_TP_2_RR","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "rearRightTirePressure"},
-    {"id": "LEXUS_TP_4","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #4"},
-    {"id": "LEXUS_TP_2_SPARE","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure"},
-    {"id": "LEXUS_TP_5","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #5"}
-  ]},
-{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1004"}, "freq": 5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TT_1_V2","path": "Tires","fmt": {"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front right tire temperature"},
-    {"id": "LEXUS_TT_FL_V3","path": "Tires","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Front left tire temperature"},
-    {"id": "LEXUS_TT_FL_V2","path": "Tires","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front left tire temperature"},
-    {"id": "LEXUS_TT_2_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front left tire temperature"},
-    {"id": "LEXUS_TT_FR_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Front right tire temperature"},
-    {"id": "LEXUS_TT_FR_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front right tire temperature"},
-    {"id": "LEXUS_TT_3_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear right tire temperature"},
-    {"id": "LEXUS_TT_RL_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear left tire temperature"},
-    {"id": "LEXUS_TT_RL_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear left tire temperature"},
-    {"id": "LEXUS_TT_4_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear left tire temperature"},
-    {"id": "LEXUS_TT_RR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear right tire temperature"},
-    {"id": "LEXUS_TT_RR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear right tire temperature"},
-    {"id": "LEXUS_TT_SPARE_V3","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Spare tire temperature"},
-    {"id": "LEXUS_TT_5_V2","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Spare tire temperature"},
-    {"id": "LEXUS_TT_SPARE_V2","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Spare tire temperature"}
-  ]},
-{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1005"}, "freq": 5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TP_1_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure"},
-    {"id": "LEXUS_TP_FL_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure"},
-    {"id": "LEXUS_TP_FL_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure"},
-    {"id": "LEXUS_TP_2_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure"},
-    {"id": "LEXUS_TP_FR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure"},
-    {"id": "LEXUS_TP_FR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure"},
-    {"id": "LEXUS_TP_3_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure"},
-    {"id": "LEXUS_TP_RL_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure"},
-    {"id": "LEXUS_TP_RL_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure"},
-    {"id": "LEXUS_TP_4_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure"},
-    {"id": "LEXUS_TP_RR_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure"},
-    {"id": "LEXUS_TP_RR_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure"},
-    {"id": "LEXUS_TP_SPARE_V2","path": "Tires","fmt": {"bix": 72,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Spare tire pressure"},
-    {"id": "LEXUS_TP_5_V2","path": "Tires","fmt": {"bix": 72,"len": 8,"max": 56.121212,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Spare tire pressure"}
-  ]},
-{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "2021"}, "freq": 86400, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TID_1","path": "Tires","name": "Tire 1 position","fmt": {"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}}},
-    {"id": "LEXUS_TID_2","path": "Tires","name": "Tire 2 position","fmt": {"bix": 8,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}}},
-    {"id": "LEXUS_TID_3","path": "Tires","name": "Tire 3 position","fmt": {"bix": 16,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}}},
-    {"id": "LEXUS_TID_4","path": "Tires","name": "Tire 4 position","fmt": {"bix": 24,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}}}
-  ]},
-{ "hdr": "7B0", "dbg": true, "cmd": {"21": "03"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TIRE_FR_SPD","path": "Movement","fmt": {"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Front right wheel speed"},
-    {"id": "LEXUS_TIRE_FL_SPD","path": "Movement","fmt": {"bix": 8,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Front left wheel speed"},
-    {"id": "LEXUS_TIRE_RR_SPD","path": "Movement","fmt": {"bix": 16,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Rear right wheel speed"},
-    {"id": "LEXUS_TIRE_RL_SPD","path": "Movement","fmt": {"bix": 24,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Rear left wheel speed"}
   ]},
 { "hdr": "7B0", "dbg": true, "cmd": {"21": "47"}, "freq": 60,
   "signals": [
@@ -826,41 +518,6 @@
     {"id": "LEXUS_DECEL","path": "Orientation","fmt": {"len": 8,"max": 18.18,"min": -18.18,"mul": 36.36,"div": 255,"add": -18.18,"unit": "metersPerSecondSquared"},"name": "Deceleration"},
     {"id": "LEXUS_DECEL_2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 18.18,"min": -18.18,"mul": 36.36,"div": 255,"add": -18.18,"unit": "metersPerSecondSquared"},"name": "Deceleration 2"}
   ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "06"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_YAW_1","path": "Orientation","fmt": {"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Yaw rate, sensor 1"},
-    {"id": "LEXUS_YAW_RATE_V2","path": "Orientation","fmt": {"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Yaw rate sensor"},
-    {"id": "LEXUS_YAW_2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Yaw rate, sensor 2"},
-    {"id": "LEXUS_YAW_RATE2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Yaw rate sensor, alternate"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "07"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_WHEEL_CYLINDER_PRESSURE","path": "Tires","fmt": {"len": 8,"max": 5,"div": 51,"unit": "volts"},"name": "Wheel cylinder pressure"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1D"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_RESERVOIR_WARNING_SW","path": "Control","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Reservoir warning"},
-    {"id": "LEXUS_MAIN_IDLE_SW","path": "Control","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Main idle"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1F"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_STOP_LIGHT_SW","path": "Control","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Stop light"},
-    {"id": "LEXUS_PARKING_BRAKE_SW","path": "Control","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Parking brake"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "42"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FR_WHEEL_ACCELERATION","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Front right wheel acceleration"},
-    {"id": "LEXUS_FL_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Front left wheel acceleration"},
-    {"id": "LEXUS_RR_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Rear right wheel acceleration"},
-    {"id": "LEXUS_RL_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Rear left wheel acceleration"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "46"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ZP_DEC","path": "Orientation","fmt": {"len": 8,"max": 24.91,"min": -25.11,"mul": 0.1961568627,"add": -25.11,"unit": "metersPerSecondSquared"},"name": "Zero point of deceleration"},
-    {"id": "LEXUS_ZP_DEC2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 24.91,"min": -25.11,"mul": 0.1961568627,"add": -25.11,"unit": "metersPerSecondSquared"},"name": "Zero point of deceleration 2"},
-    {"id": "LEXUS_ZP_YAW","path": "Orientation","fmt": {"bix": 16,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Zero point of yaw rate (degrees/sec)"},
-    {"id": "LEXUS_ZP_YAW_RATE","path": "Control","fmt": {"bix": 16,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Zero point of yaw rate"}
-  ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "48"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_FR_REGEN_REQUEST","path": "Battery","fmt": {"len": 16,"max": 65535,"unit": "newtonMeters"},"name": "Regenerative request"},
@@ -869,27 +526,6 @@
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "58"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_REGEN_COOPERATION","path": "Battery","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Regen cooperation"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TRC_TRAC__CTRL","path": "Tires","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, status"},
-    {"id": "LEXUS_TRC_TRAC__ENGINE_CTRL","path": "Tires","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, engine status"},
-    {"id": "LEXUS_TRC_TRAC__BRAKE_CTRL","path": "Tires","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, brake status"},
-    {"id": "LEXUS_FR_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "offon"},"name": "Front right wheel vehicle stability control status"},
-    {"id": "LEXUS_FL_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 9,"len": 1,"max": 1,"unit": "offon"},"name": "Front left wheel vehicle stability control status"},
-    {"id": "LEXUS_RR_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 10,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel vehicle stability control status"},
-    {"id": "LEXUS_RL_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel vehicle stability control status"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5F"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FR_WHEEL_ABS_CTRL","path": "Tires","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Front right wheel ABS status"},
-    {"id": "LEXUS_FL_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Front left wheel ABS status"},
-    {"id": "LEXUS_RR_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel ABS status"},
-    {"id": "LEXUS_RL_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 3,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel ABS status"},
-    {"id": "LEXUS_RR_WHEEL_EBD_CTRL","path": "Tires","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel EBS status","description": "Electronic brakeforce distribution"},
-    {"id": "LEXUS_RL_WHEEL_EBD_CTRL","path": "Tires","fmt": {"bix": 7,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel EBS status","description": "Electronic brakeforce distribution"},
-    {"id": "LEXUS_BA_CTRL_STATUS","path": "Tires","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "offon"},"name": "Brake assist status"},
-    {"id": "LEXUS_PBA_CTRL_STATUS","path": "Tires","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "offon"},"name": "Predictive brake assist status"}
   ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "A3"}, "freq": 60,
   "signals": [
@@ -904,319 +540,30 @@
   "signals": [
     {"id": "LEXUS_INSPECTION_MODE","path": "Details","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Inspection mode"}
   ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "BE"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FR_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"len": 1,"max": 1,"unit": "noyes"},"name": "Front right wheel speed?"},
-    {"id": "LEXUS_FL_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "noyes"},"name": "Front left wheel speed?"},
-    {"id": "LEXUS_RR_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "noyes"},"name": "Rear right wheel speed?"},
-    {"id": "LEXUS_RL_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 3,"len": 1,"max": 1,"unit": "noyes"},"name": "Rear left wheel speed?"},
-    {"id": "LEXUS_YAW_RATE_OPEN_ERROR","path": "Orientation","fmt": {"bix": 5,"len": 1,"max": 1,"unit": "noyes"},"name": "Yaw rate, error?"},
-    {"id": "LEXUS_DECELERATION_OPEN","path": "Orientation","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "noyes"},"name": "Deceleration open"},
-    {"id": "LEXUS_MASTER_CYLINDER_OPEN","path": "Engine","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "noyes"},"name": "Master cylinder open"},
-    {"id": "LEXUS_STROKE_OPEN","path": "Engine","fmt": {"bix": 10,"len": 1,"max": 1,"unit": "noyes"},"name": "Stroke open"},
-    {"id": "LEXUS_FR_WHEEL_CYLINDER_OPEN","path": "Tires","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "noyes"},"name": "Front right wheel cylinder open"},
-    {"id": "LEXUS_ACCUMULATOR_OPEN","path": "Engine","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "noyes"},"name": "Accumulator open"},
-    {"id": "LEXUS_HV_COMM_OPEN","path": "Engine","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "noyes"},"name": "Hydraulic valve, communication open"},
-    {"id": "LEXUS_HV_COMMUNICATION_OPEN","path": "Engine","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "offon"},"name": "HV communication open"}
-  ]},
 { "hdr": "7B1", "dbg": true, "cmd": {"22": "1026"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_COUPLING_TEMP","path": "Drivetrain","fmt": {"len": 16,"max": 100,"min": -20,"div": 128,"unit": "celsius"},"name": "Coupling temperature"}
-  ]},
-{ "hdr": "7B3", "dbg": true, "cmd": {"22": "1004"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_STEERING_ANGLE_V2","path": "Control","fmt": {"len": 16,"max": 410,"min": -410,"mul": 1.5,"sign": true,"unit": "degrees"},"name": "Steering angle"}
-  ]},
-{ "hdr": "7C0", "fcm1": true, "dbg": true, "cmd": {"22": "1022"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FLV","path": "Fuel","fmt": {"len": 16,"max": 655,"div": 100,"nullmax": 655,"unit": "liters"},"name": "Fuel remaining","suggestedMetric": "fuelTankLevel"},
-    {"id": "LEXUS_FUEL_LEVEL","path": "Fuel","fmt": {"len": 16,"max": 655.35,"div": 100,"unit": "liters"},"name": "Fuel level"}
   ]},
 { "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "41"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_OIL_CHANGE_ODO","path": "Fluids","fmt": {"len": 8,"max": 41038.272,"mul": 2514600,"div": 15625,"unit": "kilometers"},"name": "Distance since oil change"}
   ]},
-{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "68"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_RHEOSTAT","path": "Lights","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Rheostat","description": "Higher values are brighter"}
-  ]},
-{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "AC"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_REVERSE_BEEP","path": "Seatbelts","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "onoff"},"name": "Reverse beep"}
-  ]},
-{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1021"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_BATTERY_VOLTAGE_V2","path": "Electrical","fmt": {"len": 8,"max": 20,"div": 10,"unit": "volts"},"name": "B+ Battery Voltage"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1040"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TRANSAXLE_OIL_T","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transaxle oil temperature"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1075"}, "freq": 0.1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FR_WHEEL_VSS","path": "Movement","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Front right wheel speed"},
-    {"id": "LEXUS_FL_WHEEL_VSS","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Front left wheel speed"},
-    {"id": "LEXUS_RR_WHEEL_VSS","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Rear right wheel speed"},
-    {"id": "LEXUS_RL_WHEEL_VSS","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Rear left wheel speed"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10A1"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_RPM","path": "Engine","fmt": {"len": 16,"max": 32767,"min": -32768,"add": -32768,"unit": "rpm"},"name": "Motor rpm"},
-    {"id": "LEXUS_TQ","path": "Engine","fmt": {"bix": 48,"len": 16,"max": 4095,"min": -4096,"div": 8,"add": -4096,"unit": "newtonMeters"},"name": "Motor torque"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10A6"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_RM_INVRT_COOL_T","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear motor inverter, coolant temperature"},
-    {"id": "LEXUS_M_INVRT_MAX_T","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Motor inverter, maximum temperature"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10B2"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_INVRT_COOLANT_T","path": "Engine","fmt": {"len": 8,"max": 100,"add": -40,"unit": "celsius"},"name": "Inverter coolant temperature"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "15EE"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_12V_V","path": "Battery","fmt": {"len": 8,"max": 80.2,"mul": 0.31448,"add": 0.0125,"unit": "volts"},"name": "12v battery voltage","suggestedMetric": "starterBatteryVoltage"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "15F7"}, "freq": 0.5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_12V_C","path": "Battery","fmt": {"len": 16,"max": 124,"min": -125,"mul": 38.147,"div": 10000,"add": -125,"unit": "amps"},"name": "12v battery current"}
-  ]},
 { "hdr": "7D2", "dbg": true, "cmd": {"22": "15F8"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_12V_T","path": "Battery","fmt": {"len": 16,"max": 6513.5,"min": -40,"div": 10,"add": -40,"unit": "celsius"},"name": "12v battery temperature"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F05"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_COOL_T","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Coolant temperature"}
-  ]},
-{ "hdr": "7D2", "fcm1": true, "dbg": true, "cmd": {"22": "1F0D"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VSS_V3","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F49"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ACC_PEDAL_POS_1","path": "Control","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator pedal, position 1"}
-  ]},
-{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F4A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ACC_PEDAL_POS_2","path": "Control","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator pedal, position 2"}
   ]},
 { "hdr": "7D2", "fcm1": true, "dbg": true, "cmd": {"22": "1F5B"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_SOC","path": "Battery","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "State of charge","suggestedMetric": "stateOfCharge"}
   ]},
-{ "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "1609"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_HVBAT_CHRG_V","path": "Battery","fmt": {"len": 16,"max": 100,"div": 10,"unit": "volts"},"name": "HV battery charge voltage"}
-  ]},
 { "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "1829"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_HVBAT_MAX_T","path": "Battery","fmt": {"len": 8,"max": 205,"min": -50,"add": -50,"unit": "celsius"},"name": "HV battery maximum temperature"}
-  ]},
-{ "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "182A"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_HVBAT_MIN_T","path": "Battery","fmt": {"len": 8,"max": 205,"min": -50,"add": -50,"unit": "celsius"},"name": "HV battery minimum temperature"}
   ]},
 { "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "1F9A"}, "freq": 60,
   "signals": [
     {"id": "LEXUS_HVBAT_V","path": "Battery","fmt": {"bix": 16,"len": 16,"max": 1023,"mul": 156.25,"div": 10000,"unit": "volts"},"name": "HV battery voltage"},
     {"id": "LEXUS_HVBAT_C","path": "Battery","fmt": {"bix": 32,"len": 16,"max": 3276.7,"min": -3276.8,"div": 10,"sign": true,"unit": "amps"},"name": "HV battery current"}
-  ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"21": "28"}, "freq": 5, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ODO_V3_V2","path": "Trips","fmt": {"len": 24,"max": 16777215,"unit": "kilometers"},"name": "Odometer","suggestedMetric": "odometer"}
-  ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"21": "51"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ENG_START_T","path": "Engine","fmt": {"len": 16,"max": 655350,"mul": 10,"unit": "milliseconds"},"name": "Engine starting time"},
-    {"id": "LEXUS_ENG_SPD_START_OFF","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 51199,"mul": 100,"div": 128,"unit": "rpm"},"name": "Engine speed, starter off"},
-    {"id": "LEXUS_IMMOB_FUEL_CUT","path": "Fuel","fmt": {"bix": 32,"len": 1,"max": 1,"unit": "offon"},"name": "Immobilizer fuel cut"},
-    {"id": "LEXUS_STARTER_CNT","path": "Engine","fmt": {"bix": 33,"len": 7,"max": 127,"unit": "scalar"},"name": "Starter count"},
-    {"id": "LEXUS_PREV_TRIP_DST","path": "Trips","fmt": {"bix": 40,"len": 16,"max": 655.35,"div": 100,"unit": "kilometers"},"name": "Previous trip distance"},
-    {"id": "LEXUS_VVTOT","path": "Engine","fmt": {"bix": 56,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Variable valve timing oil temperature"},
-    {"id": "LEXUS_PREV_TRIP_IAT","path": "Engine","fmt": {"bix": 64,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Intake air temperature, previous trip"},
-    {"id": "LEXUS_EOT_V2","path": "Engine","fmt": {"bix": 72,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature"},
-    {"id": "LEXUS_PREV_TRIP_EOT","path": "Engine","fmt": {"bix": 80,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature, previous trip"},
-    {"id": "LEXUS_AC_AMB_T","path": "Climate","fmt": {"bix": 88,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature for A/C"},
-    {"id": "LEXUS_PREV_TRIP_AMB_T","path": "Trips","fmt": {"bix": 96,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature, previous trip"},
-    {"id": "LEXUS_TPS","path": "Engine","fmt": {"bix": 104,"len": 16,"max": 499.99,"mul": 125,"div": 16384,"unit": "degrees"},"name": "Throttle position"},
-    {"id": "LEXUS_ISC_FLOW","path": "Engine","fmt": {"bix": 120,"len": 16,"max": 79.99,"mul": 10,"div": 8192,"unit": "scalar"},"name": "Idle speed control flow"},
-    {"id": "LEXUS_ISC_POS","path": "Engine","fmt": {"bix": 136,"len": 16,"max": 499.99,"mul": 125,"div": 16384,"unit": "degrees"},"name": "Idle speed control position"},
-    {"id": "LEXUS_ISC_FB","path": "Engine","fmt": {"bix": 168,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Idle speed control feedback"},
-    {"id": "LEXUS_ISC_LEARN","path": "Engine","fmt": {"bix": 184,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Idle speed control learning value"},
-    {"id": "LEXUS_ELEC_LOAD_FB","path": "Electrical","fmt": {"bix": 200,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Electric load feedback"},
-    {"id": "LEXUS_AC_FB","path": "Climate","fmt": {"bix": 216,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Air conditioner feedback"},
-    {"id": "LEXUS_N_RANGE_STS","path": "Transmission","fmt": {"bix": 232,"len": 1,"max": 1,"unit": "offon"},"name": "Neutral range status"},
-    {"id": "LEXUS_NEUTRAL_CTRL","path": "Transmission","fmt": {"bix": 233,"len": 1,"max": 1,"unit": "offon"},"name": "Neutral control"},
-    {"id": "LEXUS_LOW_RPM_CTRL","path": "Engine","fmt": {"bix": 234,"len": 1,"max": 1,"unit": "offon"},"name": "Low revolution control"},
-    {"id": "LEXUS_VVT_ADV_FAIL","path": "Engine","fmt": {"bix": 235,"len": 1,"max": 1,"unit": "offon"},"name": "Variable valve timing advance fail"},
-    {"id": "LEXUS_LOW_RPM_START","path": "Engine","fmt": {"bix": 236,"len": 1,"max": 1,"unit": "offon"},"name": "Low revolution for engine start"},
-    {"id": "LEXUS_ENG_START_HESIT","path": "Engine","fmt": {"bix": 237,"len": 1,"max": 1,"unit": "offon"},"name": "Engine start hesitation"}
-  ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"21": "82"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_ATF_PAN_T","path": "Transmission","fmt": {"len": 16,"max": 215,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission temperature (pan)"},
-    {"id": "LEXUS_ATF_TQC_T","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 215,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission temperature (torque converter)"}
-  ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"21": "85"}, "freq": 0.4, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_GEAR","path": "Transmission","fmt": {"len": 8,"max": 20,"unit": "scalar"},"name": "Gear"},
-    {"id": "LEXUS_GEAR_V2_V2","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Gear, variant"},
-    {"id": "LEXUS_TQC_LOCKUP","path": "Transmission","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "offon"},"name": "Torque converter lock-up","description": "Engages a clutch inside the torque converter to create a direct connection between the engine and transmission, reducing slippage and improving efficiency."}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_CALCULATED_LOAD_7E0","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Calculated load_7e0"},
-    {"id": "LEXUS_VEHICLE_LOAD","path": "Engine","fmt": {"bix": 8,"len": 16,"max": 100,"mul": 100,"div": 65535,"unit": "percent"},"name": "Vehicle load"},
-    {"id": "LEXUS_MAF","path": "Engine","fmt": {"bix": 24,"len": 16,"max": 655.35,"unit": "gramsPerSecond"},"name": "Mass air flow","suggestedMetric": "massAirFlow"},
-    {"id": "LEXUS_MAP","path": "Engine","fmt": {"bix": 40,"len": 8,"max": 255,"unit": "kilopascal"},"name": "Manifold absolute pressure"},
-    {"id": "LEXUS_INTAKE_AIR","path": "Engine","fmt": {"bix": 48,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Intake air"},
-    {"id": "LEXUS_AAT_V2","path": "Engine","fmt": {"bix": 56,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature"},
-    {"id": "LEXUS_ATMOSPHERE_PRESSURE","path": "Engine","fmt": {"bix": 64,"len": 8,"max": 255,"unit": "kilopascal"},"name": "Atmosphere pressure"},
-    {"id": "LEXUS_COOLANT_TEMP","path": "Engine","fmt": {"bix": 72,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Coolant temp"},
-    {"id": "LEXUS_ENGINE_SPEED","path": "Movement","fmt": {"bix": 80,"len": 16,"max": 16383,"unit": "rpm"},"name": "Engine speed"},
-    {"id": "LEXUS_VEHICLE_SPEED","path": "Movement","fmt": {"bix": 96,"len": 8,"max": 255,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed"},
-    {"id": "LEXUS_ENGINE_RUN_TIME","path": "Engine","fmt": {"bix": 104,"len": 16,"max": 65535,"unit": "seconds"},"name": "Engine run time"},
-    {"id": "LEXUS_THROTTLE_SENSOR_POSITION","path": "Engine","fmt": {"bix": 120,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor position"},
-    {"id": "LEXUS_THROTTLE_SENSOR_VOLT","path": "Engine","fmt": {"bix": 128,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor volt %, 1"},
-    {"id": "LEXUS_THROTTL_SENSOR_2_VOLT","path": "Engine","fmt": {"bix": 136,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor volt %, 2"},
-    {"id": "LEXUS_ACCEL_SENS_NO_1_VOLT","path": "Engine","fmt": {"bix": 144,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator sensor volt %, 1"},
-    {"id": "LEXUS_ACCEL_SENS_NO_2_VOLT","path": "Engine","fmt": {"bix": 152,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator sensor volt %, 2"},
-    {"id": "LEXUS_THROTTLE_MOTOR_DUTY","path": "Engine","fmt": {"bix": 160,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle motor DUTY"},
-    {"id": "LEXUS_WARMUP_CYCLE_CLEARED_DTC","path": "Engine","fmt": {"bix": 176,"len": 8,"max": 255,"unit": "scalar"},"name": "Warm-up cycle cleared DTC"},
-    {"id": "LEXUS_TIME_AFTER_DTC_CLEARED","path": "Engine","fmt": {"bix": 192,"len": 16,"max": 65535,"unit": "minutes"},"name": "Time after DTC cleared"},
-    {"id": "LEXUS_BATTERY_VOLTAGE","path": "Battery","fmt": {"bix": 208,"len": 16,"max": 65.535,"unit": "volts"},"name": "Battery voltage"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "03"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_SHORT_FT_B1S1","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 99.218,"min": -100,"mul": 200,"div": 256,"add": -100,"unit": "percent"},"name": "Short FT B1S1"},
-    {"id": "LEXUS_LONG_FT_B1S1","path": "Engine","fmt": {"bix": 24,"len": 8,"max": 99.218,"min": -100,"mul": 200,"div": 256,"add": -100,"unit": "percent"},"name": "Long FT B1S1"},
-    {"id": "LEXUS_IGN_ADVANCE","path": "Engine","fmt": {"bix": 32,"len": 8,"max": 255,"unit": "degrees"},"name": "Ignition advance"},
-    {"id": "LEXUS_EVAP_PURGE_DUTY","path": "Engine","fmt": {"bix": 40,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "EVAP purge duty"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "05"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_CATALYST_T_B1S1","path": "Engine","fmt": {"bix": 16,"len": 16,"max": 6513.5,"min": -40,"div": 10,"add": -40,"unit": "celsius"},"name": "Catalyst temperature B1S1"},
-    {"id": "LEXUS_CATALYST_T_B1S2","path": "Engine","fmt": {"bix": 32,"len": 16,"max": 6513.5,"min": -40,"div": 10,"add": -40,"unit": "celsius"},"name": "Catalyst temperature B1S2"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "06"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_MIL","path": "DTCs","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "MIL"},
-    {"id": "LEXUS_NUMBER_OF_EMISSION_DTC","path": "DTCs","fmt": {"bix": 1,"len": 7,"max": 127,"unit": "scalar"},"name": "Number of emission DTC"},
-    {"id": "LEXUS_COMPLETE_PARTS_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 13,"len": 1,"max": 1,"unit": "offon"},"name": "Complete parts monitor_avail"},
-    {"id": "LEXUS_FUEL_SYSTEM_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 14,"len": 1,"max": 1,"unit": "offon"},"name": "Fuel system monitor_avail"},
-    {"id": "LEXUS_MISFIRE_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "offon"},"name": "Misfire monitor_avail"},
-    {"id": "LEXUS_EGR_VVT_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "offon"},"name": "EGR/VVT monitor_avail"},
-    {"id": "LEXUS_O2S_A_FS_HEATER_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "offon"},"name": "O2S heater monitor_avail"},
-    {"id": "LEXUS_O2S_A_FS_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 18,"len": 1,"max": 1,"unit": "offon"},"name": "O2S monitor_avail"},
-    {"id": "LEXUS_A_C_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 19,"len": 1,"max": 1,"unit": "offon"},"name": "A/C monitor_avail"},
-    {"id": "LEXUS_2ND_AIR_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 20,"len": 1,"max": 1,"unit": "offon"},"name": "2nd air monitor_avail"},
-    {"id": "LEXUS_EVAP_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 21,"len": 1,"max": 1,"unit": "offon"},"name": "EVAP monitor_avail"},
-    {"id": "LEXUS_HEATED_CATALYST_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 22,"len": 1,"max": 1,"unit": "offon"},"name": "Heated catalyst monitor_avail"},
-    {"id": "LEXUS_CATALYST_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 23,"len": 1,"max": 1,"unit": "offon"},"name": "Catalyst monitor_avail"},
-    {"id": "LEXUS_EGR_VVT_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 24,"len": 1,"max": 1,"unit": "offon"},"name": "EGR/VVT monitor_incmpl"},
-    {"id": "LEXUS_O2S_A_FS_HEATER_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 25,"len": 1,"max": 1,"unit": "offon"},"name": "O2S heater monitor_incmpl"},
-    {"id": "LEXUS_O2S_A_FS_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 26,"len": 1,"max": 1,"unit": "offon"},"name": "O2S monitor_incmpl"},
-    {"id": "LEXUS_A_C_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 27,"len": 1,"max": 1,"unit": "offon"},"name": "A/C monitor_incmpl"},
-    {"id": "LEXUS_2ND_AIR_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 28,"len": 1,"max": 1,"unit": "offon"},"name": "2nd air monitor_incmpl"},
-    {"id": "LEXUS_EVAP_MONITOR_ICMPL","path": "DTCs","fmt": {"bix": 29,"len": 1,"max": 1,"unit": "offon"},"name": "EVAP monitor_icmpl"},
-    {"id": "LEXUS_HEATED_CATALYST_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 30,"len": 1,"max": 1,"unit": "offon"},"name": "Heated catalyst monitor_incmpl"},
-    {"id": "LEXUS_CATALYST_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 31,"len": 1,"max": 1,"unit": "offon"},"name": "Catalyst monitor_incmpl"},
-    {"id": "LEXUS_MILON_RUN_DISTANCE","path": "DTCs","fmt": {"bix": 48,"len": 16,"max": 65535,"unit": "kilometers"},"name": "MIL ON run distance"},
-    {"id": "LEXUS_RUNNING_TIME_FROM_MIL_ON","path": "DTCs","fmt": {"bix": 64,"len": 16,"max": 65535,"unit": "minutes"},"name": "Running time from MIL ON"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "25"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_POWER_STEERING_SIGNAL","path": "Control","fmt": {"bix": 4,"len": 1,"max": 1,"unit": "scalar"},"name": "Power steering"},
-    {"id": "LEXUS_STOP_LIGHT_SWITCH","path": "Lights","fmt": {"bix": 5,"len": 1,"max": 1,"unit": "scalar"},"name": "Stop light"},
-    {"id": "LEXUS_CRUISE_CONTROL_LIVE_BRAKE_CANCEL_SWITCH","path": "Control","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "scalar"},"name": "Cruise control live brake cancel"},
-    {"id": "LEXUS_STARTER_SIGNAL","path": "Control","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "scalar"},"name": "Starter signal"},
-    {"id": "LEXUS_STARTER_CONTROL","path": "Control","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "scalar"},"name": "Starter control"},
-    {"id": "LEXUS_ELECTRICAL_LOAD_SIGNAL_1","path": "Control","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "scalar"},"name": "Electrical load signal 1"},
-    {"id": "LEXUS_ELECTRICAL_LOAD_SIGNAL_2","path": "Control","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "scalar"},"name": "Electrical load signal 2"},
-    {"id": "LEXUS_SHIFT_SW_STATUS_P_RANGE","path": "Control","fmt": {"bix": 24,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, parking"},
-    {"id": "LEXUS_SHIFT_SW_STATUS_R_RANGE","path": "Control","fmt": {"bix": 25,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, reverse"},
-    {"id": "LEXUS_SHIFT_SW_STATUS_N_RANGE","path": "Control","fmt": {"bix": 26,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, neutral"},
-    {"id": "LEXUS_SHIFT_SW_STATUS_D_RANGE","path": "Control","fmt": {"bix": 27,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, drive"},
-    {"id": "LEXUS_SPORTS_MODE_SELECTION_SW","path": "Control","fmt": {"bix": 32,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports mode selection"},
-    {"id": "LEXUS_SPORTS_SHIFT_UP_SW","path": "Control","fmt": {"bix": 33,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports shift up"},
-    {"id": "LEXUS_SPORTS_SHIFT_DOWN_SW","path": "Control","fmt": {"bix": 34,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports shift down"},
-    {"id": "LEXUS_PATTERN_SWITCH_PWR_M","path": "Control","fmt": {"bix": 42,"len": 1,"max": 1,"unit": "scalar"},"name": "Pattern switch"},
-    {"id": "LEXUS_NEUTRAL_POSITION_SW_SIGNAL","path": "Control","fmt": {"bix": 53,"len": 1,"max": 1,"unit": "scalar"},"name": "Neutral position"},
-    {"id": "LEXUS_TC_TERMINAL","path": "Control","fmt": {"bix": 61,"len": 1,"max": 1,"unit": "scalar"},"name": "TC"},
-    {"id": "LEXUS_A_C_COMPRESSOR","path": "Control","fmt": {"bix": 64,"len": 1,"max": 1,"unit": "offon"},"name": "A/C compressor"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "45"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_MISFIRE_RPM_V2","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 6375,"mul": 25,"unit": "rpm"},"name": "Misfire RPM"},
-    {"id": "LEXUS_MISFIRE_LOAD_V2","path": "Engine.Misfires","fmt": {"bix": 16,"len": 8,"max": 3.98,"mul": 4,"div": 256,"unit": "scalar"},"name": "Misfire load"},
-    {"id": "LEXUS_CYL1_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #1 misfire count"},
-    {"id": "LEXUS_CYL2_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 32,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #2 misfire count"},
-    {"id": "LEXUS_CYL3_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 40,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #3 misfire count"},
-    {"id": "LEXUS_CYL4_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 48,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #4 misfire count"},
-    {"id": "LEXUS_ALL_CYLINDERS_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 56,"len": 8,"max": 255,"unit": "scalar"},"name": "All cylinders misfire count"},
-    {"id": "LEXUS_IGNITION_TRIG_CNT","path": "Control","fmt": {"bix": 64,"len": 16,"max": 65535,"unit": "scalar"},"name": "Ignition trigger count"},
-    {"id": "LEXUS_MISFIRE_MARGIN_V2","path": "Engine.Misfires","fmt": {"bix": 80,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "percent"},"name": "Misfire margin"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "DA"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_GEAR_V3","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Current gear"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"01": "23"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_FRP_DIRECT","path": "Fuel","fmt": {"len": 16,"max": 655350,"mul": 10,"unit": "kilopascal"},"name": "Fuel rail pressure, direct injection"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0C"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_KNOCK_FB","path": "Engine","fmt": {"len": 8,"max": 63.5,"min": -64,"div": 2,"add": -64,"unit": "degrees"},"name": "Knock feedback"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "39"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VVT_OCV_DUTY_B1","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "VVT OCV duty, bank 1"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3B"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_VVT_IN_TGT_B1","path": "Engine","fmt": {"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake target, bank 1"},
-    {"id": "LEXUS_VVT_IN_ACT_B1","path": "Engine","fmt": {"bix": 16,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake actual, bank 1"},
-    {"id": "LEXUS_VVT_IN_TGT_B2","path": "Engine","fmt": {"bix": 32,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake target, bank 2"},
-    {"id": "LEXUS_VVT_IN_ACT_B2","path": "Engine","fmt": {"bix": 48,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake actual, bank 2"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "42"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_BATT_CURRENT","path": "Battery","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "amps"},"name": "Battery current"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D5"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_KNOCK_CORRECT_LEARN","path": "Engine","fmt": {"len": 16,"max": 2047.96875,"div": 32,"unit": "degrees"},"name": "Knock correction learned value"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F3"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_INJ_MODE","path": "Engine","fmt": {"len": 8,"max": 2,"unit": "scalar"},"name": "Injection mode"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F4"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_DIRECT_INJ_DUTY","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Direct injection duty"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F5"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_PORT_INJ_DUTY","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Port injection duty"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "98"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_MASTER_CYL_PRESS","path": "Brakes","fmt": {"len": 8,"max": 255,"unit": "bars"},"name": "Master cylinder pressure"}
-  ]},
-{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "D0"}, "freq": 0.25, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_WS_FL","path": "Movement","fmt": {"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, front left"},
-    {"id": "LEXUS_WS_FR","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, front right"},
-    {"id": "LEXUS_WS_RL","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, rear left"},
-    {"id": "LEXUS_WS_RR","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, rear right"}
-  ]},
-{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "82"}, "freq": 1, "filter": {"years": [9999]},
-  "signals": [
-    {"id": "LEXUS_TFT_CONV","path": "Transmission","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transmission fluid temp, converter"},
-    {"id": "LEXUS_INPUT_SHAFT","path": "Transmission","fmt": {"bix": 32,"len": 16,"max": 65535,"unit": "rpm"},"name": "Input shaft speed"},
-    {"id": "LEXUS_OUTPUT_SHAFT","path": "Transmission","fmt": {"bix": 48,"len": 16,"max": 65535,"unit": "rpm"},"name": "Output shaft speed"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "A0"}, "freq": 60,
   "signals": [
@@ -1226,10 +573,663 @@
   "signals": [
     {"id": "LEXUS_CURRENT_GEAR","path": "Transmission","fmt": {"len": 8,"max": 8,"unit": "scalar"},"name": "Current gear"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "D9"}, "freq": 1, "filter": {"years": [9999]},
+{ "hdr": "6F1", "eax": "40", "fcm1": true, "dbg": true, "cmd": {"22": "1700"}, "freq": 30, "filter": {"years": [9999]},
   "signals": [
-    {"id": "LEXUS_TFT_PAN","path": "Transmission","fmt": {"len": 16,"max": 255.996,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission fluid temp, pan","suggestedMetric": "transmissionFluidTemperature"},
-    {"id": "LEXUS_SLT_AMPS","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 655.35,"div": 100,"unit": "amps"},"name": "SLT solenoid current"},
-    {"id": "LEXUS_SLU_AMPS","path": "Transmission","fmt": {"bix": 32,"len": 16,"max": 655.35,"div": 100,"unit": "amps"},"name": "SLU solenoid current"}
+    {"id": "LEXUS_ODO_2","path": "Trips","fmt": {"len": 32,"max": 1000000,"unit": "kilometers"},"name": "Odometer variant","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4AB1"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VSS2","path": "Movement","fmt": {"len": 16,"max": 255,"div": 100,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "586F"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_EOP_V2","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Engine oil pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "0D", "fcm1": true, "dbg": true, "cmd": {"22": "D240"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VSS_INSTR","path": "Movement","fmt": {"len": 16,"max": 1000,"unit": "kilometersPerHour"},"name": "Vehicle speed (instrument cluster)","suggestedMetric": "speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA12"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ATF_TEMP_V2","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Atf temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA1F"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_KICKDOWN","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 100,"unit": "scalar"},"name": "Kickdown","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA22"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TQ_CNVRT_LOCKUP","path": "Transmission","name": "Torque converter lockup","fmt": {"bix": 8,"len": 8,"map": {"0": {"description": "Open","value": "OPEN"},"1": {"description": "Controlled low","value": "CONTROL_LOW"},"2": {"description": "Controlled high","value": "CONTROL_HIGH"},"3": {"description": "Closed low","value": "CLOSED_LOW"},"4": {"description": "Closed high","value": "CLOSED_HIGH"},"8": {"description": "Transition to open","value": "TRANSITION_OPEN"}}},"description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA23"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ODO_V3","path": "Trips","fmt": {"len": 32,"max": 1000000,"mul": 8,"unit": "kilometers"},"name": "[egs] mileage/odometer","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA25"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_EOT_V3","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Engine oil temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA28"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_BRAKE_SWITCH","path": "Control","fmt": {"bix": 8,"len": 8,"max": 1,"unit": "scalar"},"name": "Brake switch","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA2A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TQ_CNVRT_RPM","path": "Transmission","fmt": {"len": 16,"max": 32767,"min": -32768,"sign": true,"unit": "rpm"},"name": "Torque converter speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TRANS_SHAFT_RPM","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 32767,"min": -32768,"sign": true,"unit": "rpm"},"name": "Transmission output shaft speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA2E"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_GEAR_V2","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Gear","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "18", "fcm1": true, "dbg": true, "cmd": {"22": "DA37"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TIME_D","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Time in d","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIME_S","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "scalar"},"name": "Time in s","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIME_M","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "scalar"},"name": "Time in m","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "19", "fcm1": true, "dbg": true, "cmd": {"22": "DB32"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_AXLE_FRONT_ACTUAL_TORQUE","path": "Tires","fmt": {"len": 16,"max": 8000,"min": -8000,"div": 4,"sign": true,"unit": "newtonMeters"},"name": "Front axle, actual torque","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_AXLE_FRONT_SETPOINT_TORQUE","path": "Tires","fmt": {"bix": 32,"len": 16,"max": 8000,"min": -8000,"div": 4,"sign": true,"unit": "newtonMeters"},"name": "Front axle, setpoint torque","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "29", "fcm1": true, "dbg": true, "cmd": {"22": "DBE4"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FL_SPD","path": "Movement","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Front left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FR_SPD","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Front right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_SPD","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Rear left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_SPD","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"sign": true,"unit": "kilometersPerHour"},"name": "Rear right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "6F1", "eax": "19", "fcm1": true, "dbg": true, "cmd": {"22": "DFE7"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VGT_CAL_ANGLE","path": "Engine","fmt": {"len": 16,"max": 1000,"mul": 156.25,"div": 10000,"unit": "degrees"},"name": "Variable geometry turbocharger calibration angle","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_OIL_CHANGE_DIST","path": "Fluids","fmt": {"bix": 304,"len": 32,"max": 1000000,"unit": "kilometers"},"name": "Distance since last oil change","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "dbg": true, "cmd": {"22": "1074"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_EOP","path": "Engine","fmt": {"len": 16,"max": 5119,"div": 12.8,"unit": "kilopascal"},"name": "Engine oil pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ENG_OIL_PRESS","path": "Engine","fmt": {"len": 16,"max": 1000,"mul": 10,"div": 128,"unit": "kilopascal"},"name": "Engine oil pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "dbg": true, "cmd": {"22": "1078"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_IDLE_SAC_CYL_1","path": "Engine","fmt": {"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IDLE_SAC_CYL_2","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IDLE_SAC_CYL_3","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 3","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IDLE_SAC_CYL_4","path": "Engine","fmt": {"bix": 24,"len": 8,"max": 15.9375,"mul": 6.25,"div": 100,"unit": "degrees"},"name": "Idle spark advance control, cylinder 4","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "dbg": true, "cmd": {"22": "10A7"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_MIS_1","path": "Engine.Misfires","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MIS_2","path": "Engine.Misfires","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MIS_3","path": "Engine.Misfires","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 3","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MIS_4","path": "Engine.Misfires","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "scalar"},"name": "Misfire count, cylinder 4","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "dbg": true, "cmd": {"22": "1638"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ATF_TEMP","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transmission fluid temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "dbg": true, "cmd": {"22": "2848"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_EOP_CONTROL_VALVE","path": "Engine","fmt": {"len": 16,"max": 4999,"mul": 762.93,"div": 10000,"unit": "milliamps"},"name": "Engine oil pressure control valve","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1075"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_IWP_SPEED","path": "Movement","fmt": {"len": 16,"max": 300,"min": -40,"mul": 238212,"div": 10000,"add": -256000,"unit": "celsius"},"name": "Intercooler water pump speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "108A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VVT_IE_DUTY_RATIO_BANK_1","path": "Engine","fmt": {"len": 16,"max": 199,"mul": 399.9,"div": 65535,"add": -200,"unit": "percent"},"name": "Variable valve timing duty ratio, bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_IE_DUTY_RATIO_1","path": "ECU","fmt": {"len": 15,"max": 100,"mul": 399.9,"div": 65535,"add": -200,"unit": "percent"},"name": "VVT-ie duty ratio bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_IE_MOTOR_DIRECTION_FORWARD_1","path": "ECU","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "offon"},"name": "VVT-ie motor direction: forward bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "108F"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_EXHAUST_VVT_OVER_ADV_LEARN_B1","path": "Engine","fmt": {"len": 16,"max": 639.99,"mul": 639.99,"div": 65535,"unit": "degrees"},"name": "Exhaust VVT timing most over-advanced learn value, bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "109A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FFT","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Fuel filter temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2827"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ELECTRIC_WATER_PUMP","path": "Engine","fmt": {"len": 8,"max": 10200,"mul": 40,"unit": "rpm"},"name": "Electric water pump","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2829"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ELECTRIC_THERMOSTAT_DUTY_RATIO","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "percent"},"name": "Electric thermostat duty ratio","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "282C"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_COOLANT_VALVE_1_CLOSE","path": "Engine","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "noyes"},"name": "Coolant water route switching valve 1, closed?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "2843"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VVT_IE_OPENING_ANGLE_BANK_1","path": "Engine","fmt": {"len": 8,"max": 255,"unit": "percent"},"name": "Variable valve timing opening angle bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "701", "dbg": true, "cmd": {"22": "1628"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TF2_CONV","path": "Engine","fmt": {"len": 16,"max": 350,"min": -40,"mul": 0.00703125,"add": -40,"unit": "fahrenheit"},"name": "Transmission fluid post-converter temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "701", "rax": "709", "dbg": true, "cmd": {"22": "162B"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ATF_THERMAL_DEGRAD_EST","path": "Engine","fmt": {"len": 16,"max": 65535,"unit": "scalar"},"name": "Automatic transmission fluid thermal degradation estimate","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "745", "fcm1": true, "dbg": true, "cmd": {"22": "1739"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_HVBAT_SOC_DISPLAY","path": "Battery","fmt": {"len": 8,"max": 100,"unit": "percent"},"name": "HV battery charge (displayed)","suggestedMetric": "stateOfCharge","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "747", "fcm1": true, "dbg": true, "cmd": {"22": "182E"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_HVBAT_CMU01_VOLT","path": "Battery.Modules.01","fmt": {"len": 16,"max": 5,"div": 13107,"unit": "volts"},"name": "HV battery module 01 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C01_V","path": "Battery.Cells","fmt": {"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #01 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_CMU02_VOLT","path": "Battery.Modules.02","fmt": {"bix": 16,"len": 16,"max": 5,"div": 13107,"unit": "volts"},"name": "HV battery module 02 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C02_V","path": "Battery.Cells","fmt": {"bix": 16,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #02 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C03_V","path": "Battery.Cells","fmt": {"bix": 32,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #03 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C04_V","path": "Battery.Cells","fmt": {"bix": 48,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #04 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C05_V","path": "Battery.Cells","fmt": {"bix": 64,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #05 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C06_V","path": "Battery.Cells","fmt": {"bix": 80,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #06 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C07_V","path": "Battery.Cells","fmt": {"bix": 96,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #07 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C08_V","path": "Battery.Cells","fmt": {"bix": 112,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #08 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C09_V","path": "Battery.Cells","fmt": {"bix": 128,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #09 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C10_V","path": "Battery.Cells","fmt": {"bix": 144,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #10 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C11_V","path": "Battery.Cells","fmt": {"bix": 160,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #11 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C12_V","path": "Battery.Cells","fmt": {"bix": 176,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #12 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C13_V","path": "Battery.Cells","fmt": {"bix": 192,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #13 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C14_V","path": "Battery.Cells","fmt": {"bix": 208,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #14 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C15_V","path": "Battery.Cells","fmt": {"bix": 224,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #15 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C16_V","path": "Battery.Cells","fmt": {"bix": 240,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #16 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C17_V","path": "Battery.Cells","fmt": {"bix": 256,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #17 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C18_V","path": "Battery.Cells","fmt": {"bix": 272,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #18 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C19_V","path": "Battery.Cells","fmt": {"bix": 288,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #19 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C20_V","path": "Battery.Cells","fmt": {"bix": 304,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #20 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C21_V","path": "Battery.Cells","fmt": {"bix": 320,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #21 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C22_V","path": "Battery.Cells","fmt": {"bix": 336,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #22 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C23_V","path": "Battery.Cells","fmt": {"bix": 352,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #23 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C24_V","path": "Battery.Cells","fmt": {"bix": 368,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #24 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C25_V","path": "Battery.Cells","fmt": {"bix": 384,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #25 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C26_V","path": "Battery.Cells","fmt": {"bix": 400,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #26 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C27_V","path": "Battery.Cells","fmt": {"bix": 416,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #27 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C28_V","path": "Battery.Cells","fmt": {"bix": 432,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #28 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C29_V","path": "Battery.Cells","fmt": {"bix": 448,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #29 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C30_V","path": "Battery.Cells","fmt": {"bix": 464,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #30 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C31_V","path": "Battery.Cells","fmt": {"bix": 480,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #31 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C32_V","path": "Battery.Cells","fmt": {"bix": 496,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #32 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C33_V","path": "Battery.Cells","fmt": {"bix": 512,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #33 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C34_V","path": "Battery.Cells","fmt": {"bix": 528,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #34 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C35_V","path": "Battery.Cells","fmt": {"bix": 544,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #35 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C36_V","path": "Battery.Cells","fmt": {"bix": 560,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #36 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C37_V","path": "Battery.Cells","fmt": {"bix": 576,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #37 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C38_V","path": "Battery.Cells","fmt": {"bix": 592,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #38 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C39_V","path": "Battery.Cells","fmt": {"bix": 608,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #39 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C40_V","path": "Battery.Cells","fmt": {"bix": 624,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #40 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C41_V","path": "Battery.Cells","fmt": {"bix": 640,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #41 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C42_V","path": "Battery.Cells","fmt": {"bix": 656,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #42 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C43_V","path": "Battery.Cells","fmt": {"bix": 672,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #43 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C44_V","path": "Battery.Cells","fmt": {"bix": 688,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #44 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C45_V","path": "Battery.Cells","fmt": {"bix": 704,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #45 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C46_V","path": "Battery.Cells","fmt": {"bix": 720,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #46 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C47_V","path": "Battery.Cells","fmt": {"bix": 736,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #47 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C48_V","path": "Battery.Cells","fmt": {"bix": 752,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #48 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C49_V","path": "Battery.Cells","fmt": {"bix": 768,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #49 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C50_V","path": "Battery.Cells","fmt": {"bix": 784,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #50 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C51_V","path": "Battery.Cells","fmt": {"bix": 800,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #51 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C52_V","path": "Battery.Cells","fmt": {"bix": 816,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #52 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C53_V","path": "Battery.Cells","fmt": {"bix": 832,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #53 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C54_V","path": "Battery.Cells","fmt": {"bix": 848,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #54 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C55_V","path": "Battery.Cells","fmt": {"bix": 864,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #55 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C56_V","path": "Battery.Cells","fmt": {"bix": 880,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #56 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C57_V","path": "Battery.Cells","fmt": {"bix": 896,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #57 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C58_V","path": "Battery.Cells","fmt": {"bix": 912,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #58 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C59_V","path": "Battery.Cells","fmt": {"bix": 928,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #59 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C60_V","path": "Battery.Cells","fmt": {"bix": 944,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #60 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C61_V","path": "Battery.Cells","fmt": {"bix": 960,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #61 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C62_V","path": "Battery.Cells","fmt": {"bix": 976,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #62 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C63_V","path": "Battery.Cells","fmt": {"bix": 992,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #63 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C64_V","path": "Battery.Cells","fmt": {"bix": 1008,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #64 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C65_V","path": "Battery.Cells","fmt": {"bix": 1024,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #65 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C66_V","path": "Battery.Cells","fmt": {"bix": 1040,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #66 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C67_V","path": "Battery.Cells","fmt": {"bix": 1056,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #67 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C68_V","path": "Battery.Cells","fmt": {"bix": 1072,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #68 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C69_V","path": "Battery.Cells","fmt": {"bix": 1088,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #69 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C70_V","path": "Battery.Cells","fmt": {"bix": 1104,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #70 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C71_V","path": "Battery.Cells","fmt": {"bix": 1120,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #71 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C72_V","path": "Battery.Cells","fmt": {"bix": 1136,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #72 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C73_V","path": "Battery.Cells","fmt": {"bix": 1152,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #73 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C74_V","path": "Battery.Cells","fmt": {"bix": 1168,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #74 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C75_V","path": "Battery.Cells","fmt": {"bix": 1184,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #75 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C76_V","path": "Battery.Cells","fmt": {"bix": 1200,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #76 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C77_V","path": "Battery.Cells","fmt": {"bix": 1216,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #77 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C78_V","path": "Battery.Cells","fmt": {"bix": 1232,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #78 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C79_V","path": "Battery.Cells","fmt": {"bix": 1248,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #79 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C80_V","path": "Battery.Cells","fmt": {"bix": 1264,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #80 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C81_V","path": "Battery.Cells","fmt": {"bix": 1280,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #81 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C82_V","path": "Battery.Cells","fmt": {"bix": 1296,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #82 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C83_V","path": "Battery.Cells","fmt": {"bix": 1312,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #83 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C84_V","path": "Battery.Cells","fmt": {"bix": 1328,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #84 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C85_V","path": "Battery.Cells","fmt": {"bix": 1344,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #85 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C86_V","path": "Battery.Cells","fmt": {"bix": 1360,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #86 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C87_V","path": "Battery.Cells","fmt": {"bix": 1376,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #87 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C88_V","path": "Battery.Cells","fmt": {"bix": 1392,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #88 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C89_V","path": "Battery.Cells","fmt": {"bix": 1408,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #89 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C90_V","path": "Battery.Cells","fmt": {"bix": 1424,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #90 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C91_V","path": "Battery.Cells","fmt": {"bix": 1440,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #91 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C92_V","path": "Battery.Cells","fmt": {"bix": 1456,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #92 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C93_V","path": "Battery.Cells","fmt": {"bix": 1472,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #93 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C94_V","path": "Battery.Cells","fmt": {"bix": 1488,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #94 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C95_V","path": "Battery.Cells","fmt": {"bix": 1504,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #95 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HVBAT_C96_V","path": "Battery.Cells","fmt": {"bix": 1520,"len": 16,"max": 5,"mul": 5,"div": 65535,"unit": "volts"},"name": "HV battery cell #96 voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "750", "eax": "2A", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TP_2_FL","path": "Tires","fmt": {"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_1","path": "Tires","fmt": {"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2_FR","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "frontRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2_RL","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "rearLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_3","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #3","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2_RR","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","suggestedMetric": "rearRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_4","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #4","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2_SPARE","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "unknown"},"name": "Front left tire pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_5","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 3.89,"div": 58,"add": -0.5,"unit": "bars"},"name": "Tire pressure #5","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1004"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TT_1_V2","path": "Tires","fmt": {"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_FL_V3","path": "Tires","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Front left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_FL_V2","path": "Tires","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_2_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_FR_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Front right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_FR_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Front right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_3_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_RL_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_RL_V2","path": "Tires","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_4_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear left tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_RR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_RR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Rear right tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_SPARE_V3","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Spare tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_5_V2","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 100,"min": -30,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Spare tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TT_SPARE_V2","path": "Tires","fmt": {"bix": 32,"len": 8,"max": 215,"min": -40,"add": -40,"nullmin": -30,"unit": "celsius"},"name": "Spare tire temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1005"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TP_1_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_FL_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_FL_V2","path": "Tires","fmt": {"bix": 8,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_2_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Front left tire pressure","suggestedMetric": "frontLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_FR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_FR_V2","path": "Tires","fmt": {"bix": 24,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Front right tire pressure","suggestedMetric": "frontRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_3_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_RL_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_RL_V2","path": "Tires","fmt": {"bix": 40,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_4_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 56.8,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Rear left tire pressure","suggestedMetric": "rearLeftTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_RR_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_RR_V2","path": "Tires","fmt": {"bix": 56,"len": 8,"max": 3.8,"div": 58,"add": -0.5,"nullmin": 0,"unit": "bars"},"name": "Rear right tire pressure","suggestedMetric": "rearRightTirePressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_SPARE_V2","path": "Tires","fmt": {"bix": 72,"len": 8,"max": 4,"div": 58,"add": -0.5,"unit": "bars"},"name": "Spare tire pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TP_5_V2","path": "Tires","fmt": {"bix": 72,"len": 8,"max": 56.121212,"div": 4.125,"add": -5.6969697,"nullmin": 0,"unit": "psi"},"name": "Spare tire pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "750", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "2021"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TID_1","path": "Tires","name": "Tire 1 position","fmt": {"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}},"description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TID_2","path": "Tires","name": "Tire 2 position","fmt": {"bix": 8,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}},"description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TID_3","path": "Tires","name": "Tire 3 position","fmt": {"bix": 16,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}},"description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TID_4","path": "Tires","name": "Tire 4 position","fmt": {"bix": 24,"len": 8,"map": {"1": {"description": "Front left","value": "FL"},"2": {"description": "Front right","value": "FR"},"3": {"description": "Rear left","value": "RL"},"4": {"description": "Rear right","value": "RR"}}},"description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "dbg": true, "cmd": {"21": "03"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TIRE_FR_SPD","path": "Movement","fmt": {"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Front right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIRE_FL_SPD","path": "Movement","fmt": {"bix": 8,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Front left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIRE_RR_SPD","path": "Movement","fmt": {"bix": 16,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Rear right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIRE_RL_SPD","path": "Movement","fmt": {"bix": 24,"len": 8,"max": 326.4,"mul": 256,"div": 200,"unit": "kilometersPerHour"},"name": "Rear left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "06"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_YAW_1","path": "Orientation","fmt": {"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Yaw rate, sensor 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_YAW_RATE_V2","path": "Orientation","fmt": {"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Yaw rate sensor","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_YAW_2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Yaw rate, sensor 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_YAW_RATE2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Yaw rate sensor, alternate","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "07"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_WHEEL_CYLINDER_PRESSURE","path": "Tires","fmt": {"len": 8,"max": 5,"div": 51,"unit": "volts"},"name": "Wheel cylinder pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1D"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_RESERVOIR_WARNING_SW","path": "Control","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Reservoir warning","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MAIN_IDLE_SW","path": "Control","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Main idle","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1F"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_STOP_LIGHT_SW","path": "Control","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Stop light","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PARKING_BRAKE_SW","path": "Control","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Parking brake","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "42"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FR_WHEEL_ACCELERATION","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Front right wheel acceleration","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FL_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 8,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Front left wheel acceleration","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 16,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Rear right wheel acceleration","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_ACCELERATION","path": "Movement","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "metersPerSecondSquared"},"name": "Rear left wheel acceleration","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "46"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ZP_DEC","path": "Orientation","fmt": {"len": 8,"max": 24.91,"min": -25.11,"mul": 0.1961568627,"add": -25.11,"unit": "metersPerSecondSquared"},"name": "Zero point of deceleration","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ZP_DEC2","path": "Orientation","fmt": {"bix": 8,"len": 8,"max": 24.91,"min": -25.11,"mul": 0.1961568627,"add": -25.11,"unit": "metersPerSecondSquared"},"name": "Zero point of deceleration 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ZP_YAW","path": "Orientation","fmt": {"bix": 16,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "scalar"},"name": "Zero point of yaw rate (degrees/sec)","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ZP_YAW_RATE","path": "Control","fmt": {"bix": 16,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "degrees"},"name": "Zero point of yaw rate","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TRC_TRAC__CTRL","path": "Tires","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TRC_TRAC__ENGINE_CTRL","path": "Tires","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, engine status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TRC_TRAC__BRAKE_CTRL","path": "Tires","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Traction control, brake status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FR_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "offon"},"name": "Front right wheel vehicle stability control status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FL_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 9,"len": 1,"max": 1,"unit": "offon"},"name": "Front left wheel vehicle stability control status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 10,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel vehicle stability control status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_VSC_CTRL","path": "Tires","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel vehicle stability control status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5F"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FR_WHEEL_ABS_CTRL","path": "Tires","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "Front right wheel ABS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FL_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "offon"},"name": "Front left wheel ABS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel ABS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_ABS_CTRL","path": "Tires","fmt": {"bix": 3,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel ABS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_EBD_CTRL","path": "Tires","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "offon"},"name": "Rear right wheel EBS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_EBD_CTRL","path": "Tires","fmt": {"bix": 7,"len": 1,"max": 1,"unit": "offon"},"name": "Rear left wheel EBS status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_BA_CTRL_STATUS","path": "Tires","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "offon"},"name": "Brake assist status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PBA_CTRL_STATUS","path": "Tires","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "offon"},"name": "Predictive brake assist status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "BE"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FR_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"len": 1,"max": 1,"unit": "noyes"},"name": "Front right wheel speed?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FL_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "noyes"},"name": "Front left wheel speed?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 2,"len": 1,"max": 1,"unit": "noyes"},"name": "Rear right wheel speed?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_SPEED_OPEN","path": "Movement","fmt": {"bix": 3,"len": 1,"max": 1,"unit": "noyes"},"name": "Rear left wheel speed?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_YAW_RATE_OPEN_ERROR","path": "Orientation","fmt": {"bix": 5,"len": 1,"max": 1,"unit": "noyes"},"name": "Yaw rate, error?","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_DECELERATION_OPEN","path": "Orientation","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "noyes"},"name": "Deceleration open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MASTER_CYLINDER_OPEN","path": "Engine","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "noyes"},"name": "Master cylinder open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_STROKE_OPEN","path": "Engine","fmt": {"bix": 10,"len": 1,"max": 1,"unit": "noyes"},"name": "Stroke open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FR_WHEEL_CYLINDER_OPEN","path": "Tires","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "noyes"},"name": "Front right wheel cylinder open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ACCUMULATOR_OPEN","path": "Engine","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "noyes"},"name": "Accumulator open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HV_COMM_OPEN","path": "Engine","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "noyes"},"name": "Hydraulic valve, communication open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HV_COMMUNICATION_OPEN","path": "Engine","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "offon"},"name": "HV communication open","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B3", "dbg": true, "cmd": {"22": "1004"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_STEERING_ANGLE_V2","path": "Control","fmt": {"len": 16,"max": 410,"min": -410,"mul": 1.5,"sign": true,"unit": "degrees"},"name": "Steering angle","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7C0", "fcm1": true, "dbg": true, "cmd": {"22": "1022"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FLV","path": "Fuel","fmt": {"len": 16,"max": 655,"div": 100,"nullmax": 655,"unit": "liters"},"name": "Fuel remaining","suggestedMetric": "fuelTankLevel","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FUEL_LEVEL","path": "Fuel","fmt": {"len": 16,"max": 655.35,"div": 100,"unit": "liters"},"name": "Fuel level","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "68"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_RHEOSTAT","path": "Lights","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Rheostat","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "AC"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_REVERSE_BEEP","path": "Seatbelts","fmt": {"bix": 1,"len": 1,"max": 1,"unit": "onoff"},"name": "Reverse beep","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1021"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_BATTERY_VOLTAGE_V2","path": "Electrical","fmt": {"len": 8,"max": 20,"div": 10,"unit": "volts"},"name": "B+ Battery Voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1040"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TRANSAXLE_OIL_T","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transaxle oil temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1075"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FR_WHEEL_VSS","path": "Movement","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Front right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FL_WHEEL_VSS","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Front left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RR_WHEEL_VSS","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Rear right wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RL_WHEEL_VSS","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "kilometersPerHour"},"name": "Rear left wheel speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10A1"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_RPM","path": "Engine","fmt": {"len": 16,"max": 32767,"min": -32768,"add": -32768,"unit": "rpm"},"name": "Motor rpm","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TQ","path": "Engine","fmt": {"bix": 48,"len": 16,"max": 4095,"min": -4096,"div": 8,"add": -4096,"unit": "newtonMeters"},"name": "Motor torque","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10A6"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_RM_INVRT_COOL_T","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Rear motor inverter, coolant temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_M_INVRT_MAX_T","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Motor inverter, maximum temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "10B2"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_INVRT_COOLANT_T","path": "Engine","fmt": {"len": 8,"max": 100,"add": -40,"unit": "celsius"},"name": "Inverter coolant temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "15EE"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_12V_V","path": "Battery","fmt": {"len": 8,"max": 80.2,"mul": 0.31448,"add": 0.0125,"unit": "volts"},"name": "12v battery voltage","suggestedMetric": "starterBatteryVoltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "15F7"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_12V_C","path": "Battery","fmt": {"len": 16,"max": 124,"min": -125,"mul": 38.147,"div": 10000,"add": -125,"unit": "amps"},"name": "12v battery current","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F05"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_COOL_T","path": "Engine","fmt": {"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Coolant temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "fcm1": true, "dbg": true, "cmd": {"22": "1F0D"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VSS_V3","path": "Movement","fmt": {"len": 8,"max": 255,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F49"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ACC_PEDAL_POS_1","path": "Control","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator pedal, position 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "dbg": true, "cmd": {"22": "1F4A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ACC_PEDAL_POS_2","path": "Control","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator pedal, position 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "1609"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_HVBAT_CHRG_V","path": "Battery","fmt": {"len": 16,"max": 100,"div": 10,"unit": "volts"},"name": "HV battery charge voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7D2", "rax": "7DA", "dbg": true, "cmd": {"22": "182A"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_HVBAT_MIN_T","path": "Battery","fmt": {"len": 8,"max": 205,"min": -50,"add": -50,"unit": "celsius"},"name": "HV battery minimum temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"21": "28"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ODO_V3_V2","path": "Trips","fmt": {"len": 24,"max": 16777215,"unit": "kilometers"},"name": "Odometer","suggestedMetric": "odometer","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"21": "51"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ENG_START_T","path": "Engine","fmt": {"len": 16,"max": 655350,"mul": 10,"unit": "milliseconds"},"name": "Engine starting time","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ENG_SPD_START_OFF","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 51199,"mul": 100,"div": 128,"unit": "rpm"},"name": "Engine speed, starter off","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IMMOB_FUEL_CUT","path": "Fuel","fmt": {"bix": 32,"len": 1,"max": 1,"unit": "offon"},"name": "Immobilizer fuel cut","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_STARTER_CNT","path": "Engine","fmt": {"bix": 33,"len": 7,"max": 127,"unit": "scalar"},"name": "Starter count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PREV_TRIP_DST","path": "Trips","fmt": {"bix": 40,"len": 16,"max": 655.35,"div": 100,"unit": "kilometers"},"name": "Previous trip distance","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVTOT","path": "Engine","fmt": {"bix": 56,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Variable valve timing oil temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PREV_TRIP_IAT","path": "Engine","fmt": {"bix": 64,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Intake air temperature, previous trip","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EOT_V2","path": "Engine","fmt": {"bix": 72,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PREV_TRIP_EOT","path": "Engine","fmt": {"bix": 80,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Engine oil temperature, previous trip","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_AC_AMB_T","path": "Climate","fmt": {"bix": 88,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature for A/C","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PREV_TRIP_AMB_T","path": "Trips","fmt": {"bix": 96,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature, previous trip","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TPS","path": "Engine","fmt": {"bix": 104,"len": 16,"max": 499.99,"mul": 125,"div": 16384,"unit": "degrees"},"name": "Throttle position","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ISC_FLOW","path": "Engine","fmt": {"bix": 120,"len": 16,"max": 79.99,"mul": 10,"div": 8192,"unit": "scalar"},"name": "Idle speed control flow","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ISC_POS","path": "Engine","fmt": {"bix": 136,"len": 16,"max": 499.99,"mul": 125,"div": 16384,"unit": "degrees"},"name": "Idle speed control position","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ISC_FB","path": "Engine","fmt": {"bix": 168,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Idle speed control feedback","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ISC_LEARN","path": "Engine","fmt": {"bix": 184,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Idle speed control learning value","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ELEC_LOAD_FB","path": "Electrical","fmt": {"bix": 200,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Electric load feedback","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_AC_FB","path": "Climate","fmt": {"bix": 216,"len": 16,"max": 39.99,"min": -40,"mul": 10,"div": 8192,"add": -40,"unit": "scalar"},"name": "Air conditioner feedback","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_N_RANGE_STS","path": "Transmission","fmt": {"bix": 232,"len": 1,"max": 1,"unit": "offon"},"name": "Neutral range status","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_NEUTRAL_CTRL","path": "Transmission","fmt": {"bix": 233,"len": 1,"max": 1,"unit": "offon"},"name": "Neutral control","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_LOW_RPM_CTRL","path": "Engine","fmt": {"bix": 234,"len": 1,"max": 1,"unit": "offon"},"name": "Low revolution control","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_ADV_FAIL","path": "Engine","fmt": {"bix": 235,"len": 1,"max": 1,"unit": "offon"},"name": "Variable valve timing advance fail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_LOW_RPM_START","path": "Engine","fmt": {"bix": 236,"len": 1,"max": 1,"unit": "offon"},"name": "Low revolution for engine start","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ENG_START_HESIT","path": "Engine","fmt": {"bix": 237,"len": 1,"max": 1,"unit": "offon"},"name": "Engine start hesitation","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"21": "82"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_ATF_PAN_T","path": "Transmission","fmt": {"len": 16,"max": 215,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission temperature (pan)","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ATF_TQC_T","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 215,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission temperature (torque converter)","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"21": "85"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_GEAR","path": "Transmission","fmt": {"len": 8,"max": 20,"unit": "scalar"},"name": "Gear","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_GEAR_V2_V2","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Gear, variant","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TQC_LOCKUP","path": "Transmission","fmt": {"bix": 8,"len": 1,"max": 1,"unit": "offon"},"name": "Torque converter lock-up","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_CALCULATED_LOAD_7E0","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Calculated load_7e0","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VEHICLE_LOAD","path": "Engine","fmt": {"bix": 8,"len": 16,"max": 100,"mul": 100,"div": 65535,"unit": "percent"},"name": "Vehicle load","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MAF","path": "Engine","fmt": {"bix": 24,"len": 16,"max": 655.35,"unit": "gramsPerSecond"},"name": "Mass air flow","suggestedMetric": "massAirFlow","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MAP","path": "Engine","fmt": {"bix": 40,"len": 8,"max": 255,"unit": "kilopascal"},"name": "Manifold absolute pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_INTAKE_AIR","path": "Engine","fmt": {"bix": 48,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Intake air","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_AAT_V2","path": "Engine","fmt": {"bix": 56,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Ambient temperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ATMOSPHERE_PRESSURE","path": "Engine","fmt": {"bix": 64,"len": 8,"max": 255,"unit": "kilopascal"},"name": "Atmosphere pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_COOLANT_TEMP","path": "Engine","fmt": {"bix": 72,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Coolant temp","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ENGINE_SPEED","path": "Movement","fmt": {"bix": 80,"len": 16,"max": 16383,"unit": "rpm"},"name": "Engine speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VEHICLE_SPEED","path": "Movement","fmt": {"bix": 96,"len": 8,"max": 255,"unit": "kilometersPerHour"},"name": "Vehicle speed","suggestedMetric": "speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ENGINE_RUN_TIME","path": "Engine","fmt": {"bix": 104,"len": 16,"max": 65535,"unit": "seconds"},"name": "Engine run time","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_THROTTLE_SENSOR_POSITION","path": "Engine","fmt": {"bix": 120,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor position","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_THROTTLE_SENSOR_VOLT","path": "Engine","fmt": {"bix": 128,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor volt %, 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_THROTTL_SENSOR_2_VOLT","path": "Engine","fmt": {"bix": 136,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle sensor volt %, 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ACCEL_SENS_NO_1_VOLT","path": "Engine","fmt": {"bix": 144,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator sensor volt %, 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ACCEL_SENS_NO_2_VOLT","path": "Engine","fmt": {"bix": 152,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Accelerator sensor volt %, 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_THROTTLE_MOTOR_DUTY","path": "Engine","fmt": {"bix": 160,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Throttle motor DUTY","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_WARMUP_CYCLE_CLEARED_DTC","path": "Engine","fmt": {"bix": 176,"len": 8,"max": 255,"unit": "scalar"},"name": "Warm-up cycle cleared DTC","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TIME_AFTER_DTC_CLEARED","path": "Engine","fmt": {"bix": 192,"len": 16,"max": 65535,"unit": "minutes"},"name": "Time after DTC cleared","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_BATTERY_VOLTAGE","path": "Battery","fmt": {"bix": 208,"len": 16,"max": 65.535,"unit": "volts"},"name": "Battery voltage","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "03"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_SHORT_FT_B1S1","path": "Engine","fmt": {"bix": 16,"len": 8,"max": 99.218,"min": -100,"mul": 200,"div": 256,"add": -100,"unit": "percent"},"name": "Short FT B1S1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_LONG_FT_B1S1","path": "Engine","fmt": {"bix": 24,"len": 8,"max": 99.218,"min": -100,"mul": 200,"div": 256,"add": -100,"unit": "percent"},"name": "Long FT B1S1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IGN_ADVANCE","path": "Engine","fmt": {"bix": 32,"len": 8,"max": 255,"unit": "degrees"},"name": "Ignition advance","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EVAP_PURGE_DUTY","path": "Engine","fmt": {"bix": 40,"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "EVAP purge duty","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "05"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_CATALYST_T_B1S1","path": "Engine","fmt": {"bix": 16,"len": 16,"max": 6513.5,"min": -40,"div": 10,"add": -40,"unit": "celsius"},"name": "Catalyst temperature B1S1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CATALYST_T_B1S2","path": "Engine","fmt": {"bix": 32,"len": 16,"max": 6513.5,"min": -40,"div": 10,"add": -40,"unit": "celsius"},"name": "Catalyst temperature B1S2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "06"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_MIL","path": "DTCs","fmt": {"len": 1,"max": 1,"unit": "offon"},"name": "MIL","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_NUMBER_OF_EMISSION_DTC","path": "DTCs","fmt": {"bix": 1,"len": 7,"max": 127,"unit": "scalar"},"name": "Number of emission DTC","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_COMPLETE_PARTS_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 13,"len": 1,"max": 1,"unit": "offon"},"name": "Complete parts monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_FUEL_SYSTEM_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 14,"len": 1,"max": 1,"unit": "offon"},"name": "Fuel system monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MISFIRE_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 15,"len": 1,"max": 1,"unit": "offon"},"name": "Misfire monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EGR_VVT_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "offon"},"name": "EGR/VVT monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_O2S_A_FS_HEATER_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "offon"},"name": "O2S heater monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_O2S_A_FS_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 18,"len": 1,"max": 1,"unit": "offon"},"name": "O2S monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_A_C_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 19,"len": 1,"max": 1,"unit": "offon"},"name": "A/C monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_2ND_AIR_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 20,"len": 1,"max": 1,"unit": "offon"},"name": "2nd air monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EVAP_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 21,"len": 1,"max": 1,"unit": "offon"},"name": "EVAP monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HEATED_CATALYST_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 22,"len": 1,"max": 1,"unit": "offon"},"name": "Heated catalyst monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CATALYST_MONITOR_AVAIL","path": "DTCs","fmt": {"bix": 23,"len": 1,"max": 1,"unit": "offon"},"name": "Catalyst monitor_avail","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EGR_VVT_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 24,"len": 1,"max": 1,"unit": "offon"},"name": "EGR/VVT monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_O2S_A_FS_HEATER_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 25,"len": 1,"max": 1,"unit": "offon"},"name": "O2S heater monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_O2S_A_FS_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 26,"len": 1,"max": 1,"unit": "offon"},"name": "O2S monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_A_C_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 27,"len": 1,"max": 1,"unit": "offon"},"name": "A/C monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_2ND_AIR_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 28,"len": 1,"max": 1,"unit": "offon"},"name": "2nd air monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_EVAP_MONITOR_ICMPL","path": "DTCs","fmt": {"bix": 29,"len": 1,"max": 1,"unit": "offon"},"name": "EVAP monitor_icmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_HEATED_CATALYST_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 30,"len": 1,"max": 1,"unit": "offon"},"name": "Heated catalyst monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CATALYST_MONITOR_INCMPL","path": "DTCs","fmt": {"bix": 31,"len": 1,"max": 1,"unit": "offon"},"name": "Catalyst monitor_incmpl","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MILON_RUN_DISTANCE","path": "DTCs","fmt": {"bix": 48,"len": 16,"max": 65535,"unit": "kilometers"},"name": "MIL ON run distance","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_RUNNING_TIME_FROM_MIL_ON","path": "DTCs","fmt": {"bix": 64,"len": 16,"max": 65535,"unit": "minutes"},"name": "Running time from MIL ON","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "25"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_POWER_STEERING_SIGNAL","path": "Control","fmt": {"bix": 4,"len": 1,"max": 1,"unit": "scalar"},"name": "Power steering","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_STOP_LIGHT_SWITCH","path": "Lights","fmt": {"bix": 5,"len": 1,"max": 1,"unit": "scalar"},"name": "Stop light","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CRUISE_CONTROL_LIVE_BRAKE_CANCEL_SWITCH","path": "Control","fmt": {"bix": 6,"len": 1,"max": 1,"unit": "scalar"},"name": "Cruise control live brake cancel","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_STARTER_SIGNAL","path": "Control","fmt": {"bix": 11,"len": 1,"max": 1,"unit": "scalar"},"name": "Starter signal","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_STARTER_CONTROL","path": "Control","fmt": {"bix": 12,"len": 1,"max": 1,"unit": "scalar"},"name": "Starter control","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ELECTRICAL_LOAD_SIGNAL_1","path": "Control","fmt": {"bix": 16,"len": 1,"max": 1,"unit": "scalar"},"name": "Electrical load signal 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ELECTRICAL_LOAD_SIGNAL_2","path": "Control","fmt": {"bix": 17,"len": 1,"max": 1,"unit": "scalar"},"name": "Electrical load signal 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SHIFT_SW_STATUS_P_RANGE","path": "Control","fmt": {"bix": 24,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, parking","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SHIFT_SW_STATUS_R_RANGE","path": "Control","fmt": {"bix": 25,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, reverse","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SHIFT_SW_STATUS_N_RANGE","path": "Control","fmt": {"bix": 26,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, neutral","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SHIFT_SW_STATUS_D_RANGE","path": "Control","fmt": {"bix": 27,"len": 1,"max": 1,"unit": "scalar"},"name": "Shift SW status, drive","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SPORTS_MODE_SELECTION_SW","path": "Control","fmt": {"bix": 32,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports mode selection","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SPORTS_SHIFT_UP_SW","path": "Control","fmt": {"bix": 33,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports shift up","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SPORTS_SHIFT_DOWN_SW","path": "Control","fmt": {"bix": 34,"len": 1,"max": 1,"unit": "scalar"},"name": "Sports shift down","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_PATTERN_SWITCH_PWR_M","path": "Control","fmt": {"bix": 42,"len": 1,"max": 1,"unit": "scalar"},"name": "Pattern switch","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_NEUTRAL_POSITION_SW_SIGNAL","path": "Control","fmt": {"bix": 53,"len": 1,"max": 1,"unit": "scalar"},"name": "Neutral position","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_TC_TERMINAL","path": "Control","fmt": {"bix": 61,"len": 1,"max": 1,"unit": "scalar"},"name": "TC","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_A_C_COMPRESSOR","path": "Control","fmt": {"bix": 64,"len": 1,"max": 1,"unit": "offon"},"name": "A/C compressor","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "45"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_MISFIRE_RPM_V2","path": "Engine","fmt": {"bix": 8,"len": 8,"max": 6375,"mul": 25,"unit": "rpm"},"name": "Misfire RPM","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MISFIRE_LOAD_V2","path": "Engine.Misfires","fmt": {"bix": 16,"len": 8,"max": 3.98,"mul": 4,"div": 256,"unit": "scalar"},"name": "Misfire load","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CYL1_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 24,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #1 misfire count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CYL2_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 32,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #2 misfire count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CYL3_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 40,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #3 misfire count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_CYL4_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 48,"len": 8,"max": 255,"unit": "scalar"},"name": "Cylinder #4 misfire count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_ALL_CYLINDERS_MISFIRE_CNT","path": "Engine.Misfires","fmt": {"bix": 56,"len": 8,"max": 255,"unit": "scalar"},"name": "All cylinders misfire count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_IGNITION_TRIG_CNT","path": "Control","fmt": {"bix": 64,"len": 16,"max": 65535,"unit": "scalar"},"name": "Ignition trigger count","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_MISFIRE_MARGIN_V2","path": "Engine.Misfires","fmt": {"bix": 80,"len": 8,"max": 127,"min": -128,"add": -128,"unit": "percent"},"name": "Misfire margin","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "DA"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_GEAR_V3","path": "Transmission","fmt": {"len": 8,"max": 255,"unit": "scalar"},"name": "Current gear","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"01": "23"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_FRP_DIRECT","path": "Fuel","fmt": {"len": 16,"max": 655350,"mul": 10,"unit": "kilopascal"},"name": "Fuel rail pressure, direct injection","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0C"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_KNOCK_FB","path": "Engine","fmt": {"len": 8,"max": 63.5,"min": -64,"div": 2,"add": -64,"unit": "degrees"},"name": "Knock feedback","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "39"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VVT_OCV_DUTY_B1","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "VVT OCV duty, bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3B"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_VVT_IN_TGT_B1","path": "Engine","fmt": {"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake target, bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_IN_ACT_B1","path": "Engine","fmt": {"bix": 16,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake actual, bank 1","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_IN_TGT_B2","path": "Engine","fmt": {"bix": 32,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake target, bank 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_VVT_IN_ACT_B2","path": "Engine","fmt": {"bix": 48,"len": 16,"max": 511.99,"div": 128,"unit": "degrees"},"name": "VVT intake actual, bank 2","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "42"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_BATT_CURRENT","path": "Battery","fmt": {"len": 16,"max": 327.67,"min": -327.68,"div": 100,"add": -327.68,"unit": "amps"},"name": "Battery current","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D5"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_KNOCK_CORRECT_LEARN","path": "Engine","fmt": {"len": 16,"max": 2047.96875,"div": 32,"unit": "degrees"},"name": "Knock correction learned value","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F3"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_INJ_MODE","path": "Engine","fmt": {"len": 8,"max": 2,"unit": "scalar"},"name": "Injection mode","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F4"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_DIRECT_INJ_DUTY","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Direct injection duty","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F5"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_PORT_INJ_DUTY","path": "Engine","fmt": {"len": 8,"max": 100,"mul": 100,"div": 255,"unit": "percent"},"name": "Port injection duty","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "98"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_MASTER_CYL_PRESS","path": "Brakes","fmt": {"len": 8,"max": 255,"unit": "bars"},"name": "Master cylinder pressure","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "D0"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_WS_FL","path": "Movement","fmt": {"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, front left","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_WS_FR","path": "Movement","fmt": {"bix": 16,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, front right","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_WS_RL","path": "Movement","fmt": {"bix": 32,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, rear left","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_WS_RR","path": "Movement","fmt": {"bix": 48,"len": 16,"max": 655.35,"div": 100,"unit": "kilometersPerHour"},"name": "Wheel speed, rear right","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "82"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TFT_CONV","path": "Transmission","fmt": {"bix": 16,"len": 8,"max": 215,"min": -40,"add": -40,"unit": "celsius"},"name": "Transmission fluid temp, converter","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_INPUT_SHAFT","path": "Transmission","fmt": {"bix": 32,"len": 16,"max": 65535,"unit": "rpm"},"name": "Input shaft speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_OUTPUT_SHAFT","path": "Transmission","fmt": {"bix": 48,"len": 16,"max": 65535,"unit": "rpm"},"name": "Output shaft speed","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "D9"}, "freq": 30, "filter": {"years": [9999]},
+  "signals": [
+    {"id": "LEXUS_TFT_PAN","path": "Transmission","fmt": {"len": 16,"max": 255.996,"min": -40,"div": 256,"add": -40,"unit": "celsius"},"name": "Transmission fluid temp, pan","suggestedMetric": "transmissionFluidTemperature","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SLT_AMPS","path": "Transmission","fmt": {"bix": 16,"len": 16,"max": 655.35,"div": 100,"unit": "amps"},"name": "SLT solenoid current","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"},
+    {"id": "LEXUS_SLU_AMPS","path": "Transmission","fmt": {"bix": 32,"len": 16,"max": 655.35,"div": 100,"unit": "amps"},"name": "SLU solenoid current","description": "[DISABLED] Unsupported - multiple no_data or negative responses in testing"}
   ]}
 ]}
